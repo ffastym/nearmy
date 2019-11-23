@@ -1,0 +1,40 @@
+/**
+ * Header component's styles
+ *
+ * @author Yuriy Matviyuk
+ */
+.chat-view-header {
+    @add-mixin sticky;
+    max-height: calc(#{$icon-button-height} + #{$padding-base} * 2);
+    padding: $padding-base;
+    background: $color-white;
+    box-shadow: $light-shadow;
+    top: 0;
+
+    .back:before {
+        font-size: 28px;
+    }
+
+    .video:before {
+        font-size: 20px;
+    }
+}
+
+.chat-view-user-photo {
+    padding: 0 10px;
+
+    img {
+        overflow: hidden;
+        border-radius: 50%;
+    }
+}
+
+.chat-view-user-name {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.chat-view-video {
+    margin-left: auto;
+}

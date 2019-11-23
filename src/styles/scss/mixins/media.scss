@@ -1,0 +1,12 @@
+/**
+ * @author Yuriy Matviyuk
+ */
+
+/*Mobile*/
+@custom-media --mobile (max-width: calc($md - 1px));
+
+/*Tablet*/
+@custom-media --tablet (min-width: $md);
+
+/*Desktop*/
+@custom-media --desktop (min-width: $lg);

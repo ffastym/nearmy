@@ -1,0 +1,73 @@
+/**
+ * @author Yuriy Matviyuk
+ */
+.actions {
+    display: inline-flex;
+    height: $icon-button-height;
+    position: relative;
+}
+
+.action {
+    @add-mixin icon-button;
+    &:before {
+        color: $color-base;
+    }
+
+    &.edit:before {
+        content: $fa-pen;
+    }
+
+    &.close:before {
+        content: $fa-x;
+    }
+
+    &.back:before {
+        content: $fa-angle-left;
+    }
+
+    &.attach-file:before {
+        content: $fa-clip;
+    }
+
+    &.online:before {
+        content: $fa-circle;
+        font-weight: bold;
+        font-size: 8px;
+        color: $color-online;
+    }
+
+    &.video:before {
+        content: $fa-video;
+    }
+
+    &.like:before {
+        content: $fa-heart;
+    }
+
+    &.send-message:before {
+        content: $fa-plane;
+    }
+
+    &.home:before {
+        content: $fa-home;
+    }
+
+    &.chat:before {
+        content: $fa-comments-alt;
+    }
+
+    &.profile:before {
+        content: $fa-user;
+    }
+
+    &.notifications:before {
+        content: $fa-ring;
+    }
+
+    &.active {
+        &.edit:before {
+            content: $fa-check;
+        }
+    }
+}
+ 

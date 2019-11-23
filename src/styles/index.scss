@@ -1,0 +1,40 @@
+/**
+ * @author Yuriy Matviyuk
+ */
+
+// Import variables
+@import "scss/variables/buttons.scss";
+@import "scss/variables/colors.scss";
+@import "scss/variables/effects.scss";
+@import "scss/variables/icons.scss";
+@import "scss/variables/layout.scss";
+@import "scss/variables/typography.scss";
+
+// Import mixins
+@import "scss/mixins/media.scss";
+@import "scss/mixins/icons.scss";
+@import "scss/mixins/layout.scss";
+
+// Import fonts
+@import "scss/fonts.scss";
+
+// Import component styles
+@import "./scss/reset-default.scss";
+@import "../components/App/scss/index.scss";
+@import "../components/Aside/scss/index.scss";
+@import "../components/Chat/scss/index.scss";
+@import "../components/CookiesBanner/scss/index.scss";
+@import "../components/Loader/scss/index.scss";
+@import "../components/Logo/scss/index.scss";
+@import "../components/LogIn/scss/index.scss";
+@import "../components/Main/scss/index.scss";
+@import "../components/Notify/scss/index.scss";
+@import "../components/Radius/scss/index.scss";
+@import "../components/Search/scss/index.scss";
+@import "../components/UserPreview/scss/index.scss";
+
+// Import theme styles
+@import "scss/theme.scss";
+
+// Import actions styles
+@import "scss/actions.scss";

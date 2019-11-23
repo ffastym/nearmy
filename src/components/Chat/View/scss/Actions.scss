@@ -1,0 +1,38 @@
+/**
+ * Actions component's styles
+ *
+ * @author Yuriy Matviyuk
+ */
+
+$message-input-max-height: 98px;
+
+.chat-actions-panel {
+    @add-mixin sticky;
+    padding: $padding-base;
+    background: $color-white;
+    bottom: 0;
+    box-shadow: $light-shadow;
+    align-items: flex-end;
+}
+
+.chat-message-input-wrapper {
+    width: calc(100% - #{$icon-button-width} * 2);
+    display: flex;
+    align-items: center;
+}
+
+.chat-message-input {
+    width: 100%;
+    max-width: 100%;
+    max-height: $message-input-max-height;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-word;
+    align-items: center;
+    min-height: $icon-button-height;
+    overflow-y: auto;
+
+    &:focus {
+        outline: none;
+    }
+}

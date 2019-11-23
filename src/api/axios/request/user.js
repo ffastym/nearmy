@@ -1,0 +1,98 @@
+/**
+ * @author Yuriy Matviyuk
+ */
+import axios from 'axios'
+import config from '../config'
+import store from '../../../redux/store'
+import userActions from '../../../redux/actions/user'
+import appActions from '../../../redux/actions/app'
+import socket from '../../io/socket'
+
+const userRequest = {
+  /**
+   * Log into account
+   *
+   * @param userData
+   *
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  logIn: (userData) => {
+    axios.post(config.getUrl('logIn'), userData).then(({ data }) => {
+      if (!data.success) {
+        return store.dispatch(appActions.setNotify('loginError', 'error'))
+      }
+
+      const user = data.user
+      const userId = user._id
+      socket.io(userId)
+      user.id = userId
+      delete user._id
+      delete user.__v
+
+      store.dispatch(userActions.logIn(user))
+      if (userData.expiresIn) {
+        const secure = process.env.NODE_ENV === 'development' ? '' : 'secure;'
+        document.cookie = `dibf=${userData.facebookId}; path=/; samesite; ${secure} max-age=${userData.expiresIn}`
+      }
+    })
+  },
+
+  /**
+   * Set user profile photo
+   *
+   * @param data
+   *
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  setAvatar: data => {
+    return axios.post(config.getUrl('setAvatar'), data)
+  },
+
+  /**
+   * Set user gender (use in social login)
+   *
+   * @param id
+   * @param gender
+   *
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  setGender (id, gender) {
+    return axios.post(config.getUrl('setUserGender'), { id, gender })
+  },
+
+  /**
+   * Fetch all users in such radius
+   *
+   * @param coordinates
+   * @param radius
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  getNearbyUsers (coordinates, radius) {
+    return axios.post(config.getUrl('getNearbyUsers'), { coordinates, radius })
+  },
+
+  /**
+   * Save in db user subsription to the push notifications
+   *
+   * @param subscription
+   * @param id
+   *
+   * @returns {AxiosPromise<any>}
+   */
+  saveSubscription (subscription, id) {
+    return axios.post(config.getUrl('saveSubscription'), { subscription, id })
+  },
+
+  /**
+   * Get user profile data
+   *
+   * @param userId
+   *
+   * @returns {AxiosPromise<any>}
+   */
+  getUserProfile (userId) {
+    return axios.post(config.getUrl('getUserProfile'), { userId })
+  }
+}
+
+export default userRequest

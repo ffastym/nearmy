@@ -1,0 +1,23 @@
+{
+  "translation": {
+		"Age": "Возраст",
+		"ageRange": "Возрастной диапазон:",
+		"determineYourLocation": "Определяем ваше местоположение...",
+		"distanceInKm": "{{distance}} км",
+		"Female": "Женский",
+		"Gender": "Пол",
+		"less1km": "< 1 км",
+		"loginError": "Ошибка входа в аккаунт. Пожалуйста попробуйте снова",
+		"Male": "Мужской",
+		"Name": "Имя",
+		"noNotifications": "У вас нет новых оповещений",
+		"numberFoundUsers": "Найдено {{qty}} пользователей",
+		"pageNotFound": "Страницу не найдено",
+		"returnHome": "Вернутся на главную",
+		"searchingNearbyUsers": "Ищем пользователей рядом...",
+		"searchRadius": "Радиус поиска: {{val}} км",
+		"setYourInfo": "Пожалуйста, сперва заполните свой профиль",
+		"yourCurrentLocation": "Ваше местоположение: ",
+		"yourMessage": "Ваше сообщение"
+  }
+}

@@ -1,0 +1,24 @@
+/**
+ * @author Yuriy Matviyuk
+ */
+.logo-wrapper {
+    @add-mixin sticky;
+    text-align: center;
+}
+
+.logo {
+    background: $color-white;
+    padding: $padding-base 30px;
+    display: inline-block;
+    box-shadow: $light-shadow;
+    border-bottom-left-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+
+    img {
+        display: block;
+
+        @media (--mobile) {
+            height: 25px;
+        }
+    }
+}

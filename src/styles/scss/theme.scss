@@ -1,0 +1,86 @@
+$actions-panel-height: 45px;
+
+/**
+ * @author Yuriy Matviyuk
+ */
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+}
+
+.app-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+h1 {
+    text-align: center;
+
+    @media (--mobile) {
+        font-size: $font-size-h1-sm;
+        margin: $margin-h1-sm;
+    }
+
+    @media (--tablet) {
+        font-size: $font-size-h1-md;
+        margin: $margin-h1-md;
+    }
+
+    @media (--desktop) {
+        font-size: $font-size-h1-lg;
+        margin: $margin-h1-lg;
+    }
+}
+
+.hidden {
+    display: block;
+    height: 0;
+    width: 0;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+[contenteditable=true]:empty {
+    line-height: $icon-button-height;
+
+    &:before {
+        content: attr(placeholder);
+        display: block; /* For Firefox */
+    }
+}
+
+.actions-panel {
+    @add-mixin sticky;
+    box-shadow: $light-shadow;
+    padding: $padding-base;
+    box-sizing: border-box;
+    align-items: center;
+    background: $color-white;
+
+    &.top {
+        top: 0;
+    }
+
+    &.bottom {
+        bottom: 0;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.main {
+    margin: 0 auto;
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    padding: $actions-panel-height $padding-base;
+}

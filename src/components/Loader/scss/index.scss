@@ -1,0 +1,58 @@
+/**
+ * @author Yuriy Matviyuk
+ */
+.loader {
+    margin: 15px auto;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+
+    &:before {
+        content: $fa-spin;
+        font-family: $font-family-FA;
+        font-weight: 300;
+        font-size: 24px;
+        color: grey;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        line-height: 30px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+.loading {
+    text-align: center;
+
+    &.loader-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

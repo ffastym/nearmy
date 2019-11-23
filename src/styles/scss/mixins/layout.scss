@@ -1,0 +1,14 @@
+/**
+ * layout moxons
+ *
+ * @author Yuriy Matviyuk
+ */
+@define-mixin sticky {
+    box-sizing: border-box;
+    display: flex;
+    left: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+}

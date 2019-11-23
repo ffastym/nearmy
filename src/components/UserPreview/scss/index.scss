@@ -1,0 +1,57 @@
+/**
+ * @author Yuriy Matviyuk
+ */
+.user-preview {
+    border-radius: $border-radius-base;
+    box-shadow: $light-shadow;
+    overflow: hidden;
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+
+    .user-info {
+        color: $color-white;
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+
+        > p {
+            margin-bottom: 3px;
+        }
+    }
+
+    .user-name {
+        font-size: 22px;
+    }
+
+    .user-age,
+    .user-distance {
+        font-size: 18px;
+    }
+
+    .user-actions {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        height: auto;
+        width: 35px;
+        flex-direction: column;
+
+        .like,
+        .chat {
+            &:before {
+                text-shadow: $icon-shadow;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        height: auto;
+        max-height: 100%;
+    }
+}

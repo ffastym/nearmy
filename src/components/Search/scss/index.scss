@@ -1,0 +1,27 @@
+/**
+ * @author Yuriy Matviyuk
+ */
+.map-config {
+    padding: 10px 0;
+}
+
+.search-config {
+    @add-mixin before-icon $fa-map-marker;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+
+    @media (--mobile) {
+        min-height: 35px;
+    }
+
+    .actions {
+        margin-left: auto;
+    }
+
+    &.radius {
+        &:before {
+            content: $fa-route;
+        }
+    }
+}

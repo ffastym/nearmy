@@ -1,0 +1,87 @@
+/**
+ * @author Yuriy Matviyuk
+ */
+@define-mixin before-icon
+    $icon,
+    $icon-display: inline-flex,
+    $color: inherit,
+    $width: 35px,
+    $height: 35px,
+    $font-size: $icon-font-size-base,
+    $padding: 0 0 0 calc($width + 5px),
+    $icon-position: absolute,
+    $top: 50%,
+    $left: 0,
+    $transform: translate(0, -50%),
+    $parent-position: relative,
+    $background: transparent
+{
+    position: $parent-position;
+    padding: $padding;
+
+    &:before {
+        align-items: center;
+        justify-content: center;
+        width: $width;
+        height: $height;
+        top: $top;
+        left: $left;
+        transform: $transform;
+        color: $color;
+        font-size: $font-size;
+        position: $icon-position;
+        display: $icon-display;
+        font-family: $font-family-FA;
+        content: $icon;
+        background: $background;
+    }
+}
+
+@define-mixin after-icon
+    $icon,
+    $icon-display: inline-flex,
+    $width: 35px,
+    $height: 35px,
+    $font-size: $icon-font-size-base,
+    $color: inherit,
+    $padding: 0 calc($width + 5px) 0 0,
+    $icon-position: absolute,
+    $top: 50%,
+    $right: 0,
+    $transform: translate(0, -50%),
+    $parent-position: relative,
+    $background: transparent
+{
+    position: $parent-position;
+    padding: $padding;
+
+    &:after {
+        align-items: center;
+        justify-content: center;
+        width: $width;
+        height: $height;
+        top: $top;
+        right: $right;
+        transform: $transform;
+        color: $color;
+        font-size: $font-size;
+        position: $icon-position;
+        display: $icon-display;
+        font-family: $font-family-FA;
+        content: $icon;
+        background: $background;
+    }
+}
+
+@define-mixin icon-button
+    $content: '',
+    $position: relative,
+    $width: $icon-button-width,
+    $height: $icon-button-height,
+    $color: $color-base
+{
+    @add-mixin before-icon $content, , , , , , 0;
+    position: $position;
+    width: $width;
+    height: $height;
+}

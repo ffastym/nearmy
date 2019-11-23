@@ -1,0 +1,13 @@
+/**
+ * index component's styles
+ *
+ * @author Yuriy Matviyuk
+ */
+@import "Message.scss";
+
+.chat-messages-wrapper {
+    height: calc(100vh - (#{$icon-button-height} + #{$padding-base} * 2) * 2);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: $padding-base 0;
+}

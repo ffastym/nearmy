@@ -1,0 +1,24 @@
+{
+  "translation": {
+		"Age": "Вік",
+		"ageRange": "Віковий діапазон:",
+		"determineYourLocation": "Визначаємо ваше розташування...",
+		"distanceInKm": "{{distance}} км",
+		"Female": "Жіноча",
+		"Gender": "Стать",
+		"less1km": "< 1 км",
+		"loginError": "Помилка входу в аккаунт. Будь ласка, спробуйте ще раз",
+		"Male": "Чоловіча",
+		"Name": "Ім'я",
+		"nearbyUsersNotFound": "Користувачів поряд не знайдено",
+		"noNotifications": "У вас немає нових сповіщень",
+		"numberFoundUsers": "Знайдено {{qty}} користувачів",
+		"pageNotFound": "Сторінку не знайдено",
+		"returnHome": "Повернутися на головну",
+		"searchingNearbyUsers": "Шукаємо користувачів поряд...",
+		"searchRadius": "Радіус пошуку: {{val}} км",
+		"setYourInfo": "Будь ласка, спершу заповніть свій профіль",
+		"yourCurrentLocation": "Ваше розташування: ",
+		"yourMessage": "Ваше повідомлення"
+	}
+}

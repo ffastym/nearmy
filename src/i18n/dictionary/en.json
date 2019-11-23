@@ -1,0 +1,24 @@
+{
+  "translation": {
+		"Age": "Age",
+		"ageRange": "Age range:",
+		"determineYourLocation": "Determine your location...",
+		"distanceInKm": "{{distance}} km",
+		"Female": "Female",
+		"Gender": "Gender",
+		"less1km": "< 1 km",
+		"loginError": "Login error. Please, try again",
+		"Male": "Male",
+		"Name": "Name",
+		"nearbyUsersNotFound": "Nearby users not found",
+		"noNotifications": "You haven't new notifications",
+		"numberFoundUsers": "Found {{qty}} users",
+		"pageNotFound": "Page not found",
+		"returnHome": "Back to home",
+		"searchingNearbyUsers": "Searching nearby users...",
+		"searchRadius": "Search radius: {{val}} km",
+		"setYourInfo": "Please, at first, set information about yourself",
+		"yourCurrentLocation": "Your location: ",
+		"yourMessage": "Your message"
+  }
+}
