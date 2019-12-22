@@ -3,11 +3,47 @@
  *
  * @author Yuriy Matviyuk
  */
-.chat-message-view {
+$background-color-own-message: $color-grey-2;
+$background-color-message: $color-purple;
+
+.chat-message-wrapper {
     display: block;
     max-width: 70%;
+
+    &:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    &:not(.own) .chat-message-view {
+        background: $background-color-message;
+        border-bottom-left-radius: 0;
+    }
+
+    &.own {
+        align-self: flex-end;
+
+        .chat-message-view {
+            background: $background-color-own-message;
+            border-bottom-right-radius: 0;
+        }
+
+        .chat-message-date {
+            text-align: right;
+        }
+    }
+}
+
+.chat-message-view {
+    padding: 7px 10px;
+    border-radius: 15px;
+    color: $color-white;
 }
 
 .chat-message-text {
     word-break: break-word;
+}
+
+.chat-message-date {
+    font-size: 10px;
+    margin-top: 2px;
 }

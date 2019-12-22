@@ -33,6 +33,10 @@ const Actions = ({ user, userId }) => {
   }
 
   const sendMessage = () => {
+    if (message.length === 0) {
+      return false
+    }
+
     if (message.length >= 1000) {
       return alert('tooLongMessage')
     }

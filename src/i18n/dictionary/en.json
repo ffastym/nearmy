@@ -14,6 +14,7 @@
 		"noNotifications": "You haven't new notifications",
 		"numberFoundUsers": "Found {{qty}} users",
 		"pageNotFound": "Page not found",
+		"profileWasUpdatedSuccessfully": "Profile was updated successfully",
 		"returnHome": "Back to home",
 		"searchingNearbyUsers": "Searching nearby users...",
 		"searchRadius": "Search radius: {{val}} km",

@@ -43,10 +43,12 @@ const Preview = ({ chat, userId }) => {
           <Transformation height="35" fetchFormat="auto" width="35" gravity='face' crop="fill" />
         </Image>
       </div>
-      <div className="interlocutor-name">{interlocutor.name}</div>
-      <div className="chat-preview-last-message">
-        <div className="chat-preview-text">{cropMessage(lastMessage.text)}</div>
-        <div className="chat-preview-date">{new Date(lastMessage.date).toISOString().slice(0, 10)}</div>
+      <div className="chat-preview-text">
+        <div className="interlocutor-name">{interlocutor.name}</div>
+        <div className="chat-preview-last-message">
+          <div className="chat-preview-message-text">{cropMessage(lastMessage.text)}</div>
+          <div className="chat-preview-date">{new Date(lastMessage.date).toISOString().slice(0, 10)}</div>
+        </div>
       </div>
     </NavLink>
   )

@@ -1,6 +1,7 @@
 /**
  * @author Yuriy Matviyuk
  */
+import appActions from '../../redux/actions/app'
 import Button from '@material-ui/core/Button'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FormLabel from '@material-ui/core/FormLabel'
@@ -12,6 +13,7 @@ import TextField from '@material-ui/core/TextField'
 import userActions from '../../redux/actions/user'
 import { connect } from 'react-redux'
 import { useTranslation } from 'react-i18next'
+import userRequest from '../../api/axios/request/user'
 
 /**
  * Editable component
@@ -21,15 +23,22 @@ import { useTranslation } from 'react-i18next'
  * @returns {*}
  * @constructor
  */
-const Editable = ({ age, gender, name, setGender }) => {
+const Editable = ({ age, gender, name, setNotify, userId }) => {
   const { t } = useTranslation()
   const [isValidated, setIsValidated] = useState(false)
   const [userData, setUserData] = useState({ age, gender, name })
-
-  const changeGender = e => setGender(e.target.value)
-  
   const saveProfile = () => {
     setIsValidated(true)
+
+    for (let value of Object.values(userData)) {
+      if (!value) {
+        return setNotify('pleaseFillRequiredFields', 'warning')
+      }
+    }
+
+    userRequest.updateProfile(userData, userId)
+      .then(() => setNotify('profileWasUpdatedSuccessfully', 'success'))
+      .catch(() => setNotify('profileUpdateError', 'error'))
   }
 
   return (
@@ -40,11 +49,13 @@ const Editable = ({ age, gender, name, setGender }) => {
         label={t('Name')}
         error={isValidated && !userData.name}
         value={userData.name ? userData.name : ''}
+        onChange={e => setUserData({ ...userData, name: e.target.value })}
         margin="normal"
       />
       <TextField
         type='number'
         min={0}
+        onChange={e => setUserData({ ...userData, age: e.target.value })}
         id="age"
         error={isValidated && !userData.age}
         value={userData.age ? userData.age : ''}
@@ -57,9 +68,8 @@ const Editable = ({ age, gender, name, setGender }) => {
         aria-label="gender"
         name="gender"
         error={isValidated && !userData.gender}
-        helperText={'asdasd'}
         value={userData.gender ? userData.gender : ''}
-        onChange={changeGender}>
+        onChange={e => setUserData({ ...userData, gender: e.target.value })}>
         <FormControlLabel value="female" control={<Radio />} label={t('Female')}/>
         <FormControlLabel value="male" control={<Radio />} label={t('Male')}/>
       </RadioGroup>
@@ -77,7 +87,8 @@ const mapStateToProps = state => {
   return {
     age: state.user.age,
     gender: state.user.gender,
-    name: state.user.name
+    name: state.user.name,
+    userId: state.user.id
   }
 }
 
@@ -89,16 +100,28 @@ const mapDispatchToProps = dispatch => {
      * @param gender
      * @returns {*}
      */
-    setGender: gender => dispatch(userActions.setGender(gender))
+    setGender: gender => dispatch(userActions.setGender(gender)),
+
+    /**
+     * Set notify message
+     *
+     * @param message
+     * @param type
+     *
+     * @returns {*}
+     */
+    setNotify: (message, type) => dispatch(appActions.setNotify(message, type))
   }
 }
 
 Editable.propTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string,
   age: PropTypes.string,
+  avatar: PropTypes.string,
   gender: PropTypes.string,
-  setGender: PropTypes.func
+  name: PropTypes.string,
+  setGender: PropTypes.func,
+  setNotify: PropTypes.func,
+  userId: PropTypes.string
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Editable)

@@ -13,6 +13,7 @@
 		"noNotifications": "У вас нет новых оповещений",
 		"numberFoundUsers": "Найдено {{qty}} пользователей",
 		"pageNotFound": "Страницу не найдено",
+		"profileWasUpdatedSuccessfully": "Ваш профиль успешно обновлен",
 		"returnHome": "Вернутся на главную",
 		"searchingNearbyUsers": "Ищем пользователей рядом...",
 		"searchRadius": "Радиус поиска: {{val}} км",

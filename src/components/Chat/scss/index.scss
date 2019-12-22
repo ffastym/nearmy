@@ -4,3 +4,9 @@
  * @author Yuriy Matviyuk
  */
 @import '../View/scss/index.scss';
+@import 'Preview.scss';
+
+.chat-previews-wrapper {
+    display: flex;
+    flex-direction: column;
+}

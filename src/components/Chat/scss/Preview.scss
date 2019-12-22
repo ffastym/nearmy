@@ -1,0 +1,42 @@
+/**
+ * Preview component's styles
+ *
+ * @author Yuriy Matviyuk
+ */
+.chat-preview {
+    display: flex;
+    padding: $padding-base 0;
+
+    &:not(:last-of-type) {
+        border-bottom: $border-base;
+    }
+
+    .interlocutor-name {
+        font-weight: bold;
+    }
+
+    .chat-preview-date {
+        font-size: 10px;
+    }
+
+    .interlocutor-photo {
+        display: flex;
+        align-items: center;
+
+        img {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+}
+
+.chat-preview-text {
+    padding-left: $padding-base;
+    max-width: calc(100% - 35px);
+}
+
+.chat-preview-message-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 2px 0;
+}

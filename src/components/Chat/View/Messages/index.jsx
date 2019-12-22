@@ -1,7 +1,7 @@
 /**
  * @author Yuriy Matviyuk
  */
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import MessageView from './Message'
@@ -15,8 +15,15 @@ import MessageView from './Message'
  * @constructor
  */
 const Messages = ({ messages }) => {
+  const wrapperEl = useRef(null)
+
+  useEffect(() => {
+    const wrapper = wrapperEl.current
+    wrapper.scrollTo(0, wrapper.scrollHeight)
+  })
+
   return (
-    <div className='chat-messages-wrapper'>
+    <div className='chat-messages-wrapper' ref={wrapperEl}>
       {messages.map(message => <MessageView key={message._id} message={message}/>)}
     </div>
   )

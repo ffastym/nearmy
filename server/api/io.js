@@ -32,6 +32,7 @@ const io = {
       let userId = socket.handshake.query.id
 
       if (userId) {
+        socket.userId = userId
         this.users[userId] = socket.id
 
         return next()
@@ -42,10 +43,30 @@ const io = {
   },
 
   /**
+   * Change user online status
+   *
+   * @param userId
+   * @param isOnline
+   */
+  changeOnlineStatus (userId, isOnline) {
+    Models.User.findOneAndUpdate(
+      { _id: userId },
+      { $set: { isOnline } },
+      { useFindAndModify: false },
+      (err) => {
+        if (err) {
+          return console.log('Saving subscription error ---> ', err)
+        }
+      }
+    )
+  },
+
+  /**
    * Subscribe to socket events
    */
   subscribeToEvents () {
     this.io.on('connection', socket => {
+      this.changeOnlineStatus(socket.userId, true)
       Object.keys(this.events).forEach(eventName => {
         socket.on(eventName, (data) => {
           this.events[eventName].bind(this)(data, socket)
@@ -92,6 +113,7 @@ const io = {
 
         if (users[userId] === socket.id) {
           delete users[userId]
+          this.changeOnlineStatus(socket.userId, false)
           break
         }
       }
@@ -157,8 +179,7 @@ const io = {
 
               if (subscription) {
                 notification.send(subscription, {
-                  type: 'NEW_BATTLE',
-                  name: user.name
+                  type: 'NEW_MESSAGE'
                 })
               }
 

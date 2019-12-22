@@ -34,6 +34,11 @@ const Schemas = {
         type: String,
         required: true
       },
+      isOnline: {
+        type: Boolean,
+        required: true,
+        default: true
+      },
       notifications: [{
         type: Schema.Types.ObjectId,
         ref: 'Notification',

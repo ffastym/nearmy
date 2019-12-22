@@ -49,6 +49,16 @@ const userRequest = {
   },
 
   /**
+   * Update user profile information
+   *
+   * @param data
+   * @param userId
+   */
+  updateProfile: (data, userId) => {
+    return axios.post(config.getUrl('updateProfile'), { data, userId })
+  },
+
+  /**
    * Set user gender (use in social login)
    *
    * @param id
@@ -63,12 +73,12 @@ const userRequest = {
   /**
    * Fetch all users in such radius
    *
-   * @param coordinates
-   * @param radius
+   * @param searchData
+   *
    * @returns {Promise<AxiosResponse<T>>}
    */
-  getNearbyUsers (coordinates, radius) {
-    return axios.post(config.getUrl('getNearbyUsers'), { coordinates, radius })
+  getNearbyUsers (searchData) {
+    return axios.post(config.getUrl('getNearbyUsers'), searchData)
   },
 
   /**

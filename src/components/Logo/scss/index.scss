@@ -3,6 +3,7 @@
  */
 .logo-wrapper {
     @add-mixin sticky;
+    justify-content: center;
     text-align: center;
 }
 

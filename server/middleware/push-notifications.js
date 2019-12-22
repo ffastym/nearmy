@@ -29,10 +29,10 @@ const preparePayload = ({ type, name }) => {
   }
 
   switch (type) {
-    case 'NEW_BATTLE':
+    case 'NEW_MESSAGE':
       payload = {
         ...payload,
-        title: 'Новий Батл',
+        title: 'Нове повідомлення',
         tag: 'battle-accept',
         actions: [
           {
@@ -44,7 +44,7 @@ const preparePayload = ({ type, name }) => {
             title: 'Закрити'
           }
         ],
-        body: 'Користувач ' + name + ' пропонує вам батл'
+        body: 'У вас нове повідомлення'
       }
       break
     case 'ACCEPT_BATTLE':

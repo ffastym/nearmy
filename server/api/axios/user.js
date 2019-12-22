@@ -32,6 +32,38 @@ const userRequest = {
     },
 
     /**
+     * Set user coordinates into database
+     *
+     * @param userId
+     * @param coordinates
+     */
+    setCoordinates (userId, coordinates) {
+      Models.User.findOneAndUpdate(
+        { _id: userId },
+        { $set: { coordinates } },
+        { useFindAndModify: false },
+        err => err && console.log('set coordinates error ---> ', err)
+      )
+    },
+
+    /**
+     * Update user profile data
+     *
+     * @param req
+     * @param res
+     */
+    updateProfile (req, res) {
+      const body = req.body
+
+      Models.User.findOneAndUpdate(
+        { _id: body.userId },
+        { $set: { ...body.data } },
+        { useFindAndModify: false },
+        err => res.json({ success: !err })
+      )
+    },
+
+    /**
      * Get nearby users
      *
      * @param req
@@ -41,16 +73,17 @@ const userRequest = {
       const data = req.body
       const coordinates = data.coordinates
       const radius = data.radius
+      const formattedCoordinates = [ coordinates.lng, coordinates.lat ]
+
+      userRequest.post.setCoordinates(formattedCoordinates, data.userId)
 
       Models.User.find({
         coordinates: {
           $geoWithin: {
-            $centerSphere: [
-              [ coordinates.lng, coordinates.lat ],
-              radius / R
-            ]
+            $centerSphere: [formattedCoordinates, radius / R]
           }
-        }
+        },
+        gender: { $ne: data.gender }
       }).select(['+coordinates'])
         .exec((err, data) => {
           let users = []

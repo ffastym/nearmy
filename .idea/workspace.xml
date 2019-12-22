@@ -2,208 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdc1a47f-c4fd-4538-b105-0ae011fc4e71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/development-sw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Black.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Heavy.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Heavy.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Heavy.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Semibold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Semibold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Semibold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Thin.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Thin.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Ultralight.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Ultralight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIDisplay-Ultralight.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-BoldItalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-BoldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Heavy.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Heavy.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Heavy.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-HeavyItalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-HeavyItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-HeavyItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Italic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Italic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-LightItalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-LightItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-MediumItalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-MediumItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Semibold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Semibold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-Semibold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-SemiboldItalic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-SemiboldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/SFUIText-SemiboldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-light-300.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-light-300.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-light-300.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-light-300.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-light-300.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/axios/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/axios/chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/axios/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/axios/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/email.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/io.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/db/Models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/db/Schemas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/db/connectToDb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/app-notifications.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/push-notifications.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/renderer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/axios/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/axios/request/chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/axios/request/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/cloudinary.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/fb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/google/mapsAPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/io/events.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/io/socket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ActionsPanel/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Aside/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Aside/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/Preview.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/Actions.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/Message.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/scss/Message.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/scss/Actions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/scss/Header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/View/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Chat/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CookiesBanner/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CookiesBanner/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Head/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Home/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Loader/Loader.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Loader/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LogIn/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LogIn/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Logo/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Logo/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Main/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Main/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NotFound/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notifications/Notification.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notifications/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notify/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notify/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Radius/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Radius/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserPreview/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserPreview/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserProfile/Editable.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserProfile/Guest.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserProfile/Photo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UserProfile/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UsersList/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helper/storage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n/dictionary/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n/dictionary/ru.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n/dictionary/uk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/url.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/actions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/mixins/icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/mixins/layout.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/mixins/media.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/reset-default.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/variables/buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/variables/colors.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/variables/effects.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/variables/fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/variables/icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/variables/layout.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/scss/variables/typography.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/subscription.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sw-build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sw-template.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stylelint.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/chat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nearme.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Chat/scss/Preview.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Favorites/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserProfile/scss/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/axios/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/axios/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/io.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/io.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/db/Schemas.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/Schemas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/push-notifications.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/push-notifications.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/axios/request/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axios/request/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/Preview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/Preview.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Actions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/Actions.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/Message.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/scss/Message.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/scss/Message.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logo/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserProfile/Editable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserProfile/Editable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserProfile/Photo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserProfile/Photo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/dictionary/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/dictionary/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/dictionary/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/dictionary/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/dictionary/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/dictionary/uk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/scss/reset-default.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/reset-default.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/scss/variables/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/variables/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/scss/variables/effects.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/variables/effects.scss" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,10 +72,15 @@
   </component>
   <component name="ProjectId" id="1R9k9qhArKXnctEstppZ4BqIkpv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Chat/View/Messages/scss" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/magento2" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -281,19 +115,7 @@
       <recent name="D:\WEB\react\nearme\src\redux\reducers" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="npm.watch:css">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -359,13 +181,25 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.watch:css" />
         <item itemvalue="npm.devserver" />
+        <item itemvalue="npm.watch:css" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.build:css" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -419,7 +253,14 @@
       <workItem from="1574022197578" duration="1037000" />
       <workItem from="1574104919500" duration="10727000" />
       <workItem from="1574188258183" duration="14593000" />
-      <workItem from="1574525439980" duration="12336000" />
+      <workItem from="1574525439980" duration="20639000" />
+      <workItem from="1574598933504" duration="8979000" />
+      <workItem from="1575150991504" duration="249000" />
+      <workItem from="1575214094257" duration="1645000" />
+      <workItem from="1575481620310" duration="325000" />
+      <workItem from="1575816327722" duration="600000" />
+      <workItem from="1576959843280" duration="628000" />
+      <workItem from="1577019435803" duration="3841000" />
     </task>
     <servers />
   </component>
@@ -439,12 +280,89 @@
       </map>
     </option>
   </component>
+  <component name="WindowStateProjectService">
+    <state x="371" y="105" key="FileChooserDialogImpl" timestamp="1576959871485">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="371" y="105" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1576959871485" />
+    <state width="1236" height="250" key="GridCell.Tab.0.bottom" timestamp="1577023360061">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1238" height="239" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1575222588335" />
+    <state width="1236" height="250" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023360061" />
+    <state width="1236" height="250" key="GridCell.Tab.0.center" timestamp="1577023360060">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1238" height="239" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1575222588335" />
+    <state width="1236" height="250" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023360060" />
+    <state width="1236" height="250" key="GridCell.Tab.0.left" timestamp="1577023360060">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1238" height="239" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1575222588335" />
+    <state width="1236" height="250" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023360060" />
+    <state width="1236" height="250" key="GridCell.Tab.0.right" timestamp="1577023360061">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1238" height="239" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1575222588335" />
+    <state width="1236" height="250" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023360061" />
+    <state width="1236" height="250" key="GridCell.Tab.1.bottom" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state width="1236" height="250" key="GridCell.Tab.1.center" timestamp="1577023359929">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359929" />
+    <state width="1236" height="250" key="GridCell.Tab.1.left" timestamp="1577023359929">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359929" />
+    <state width="1236" height="250" key="GridCell.Tab.1.right" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state width="1236" height="250" key="GridCell.Tab.2.bottom" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state width="1236" height="250" key="GridCell.Tab.2.center" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state width="1236" height="250" key="GridCell.Tab.2.left" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state width="1236" height="250" key="GridCell.Tab.2.right" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state width="1236" height="250" key="GridCell.Tab.3.bottom" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state width="1236" height="250" key="GridCell.Tab.3.center" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state width="1236" height="250" key="GridCell.Tab.3.left" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state width="1236" height="250" key="GridCell.Tab.3.right" timestamp="1577023359930">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1236" height="250" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023359930" />
+    <state x="2194" y="189" width="731" height="662" key="find.popup" timestamp="1577023316402">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state x="2194" y="189" width="731" height="662" key="find.popup/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023316402" />
+  </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="js.build_tools.npm">
-        <watch expression="chat" language="JavaScript" />
-        <watch expression="this.users" language="JavaScript" />
-        <watch expression="user._id.toString()" language="JavaScript" />
+        <watch expression="data" language="JavaScript" />
+        <watch expression="_id" language="JavaScript" />
       </configuration>
     </watches-manager>
   </component>

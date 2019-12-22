@@ -31,9 +31,7 @@ const Header = ({ user, history }) => {
       </NavLink>
       <div className="chat-view-user-name">
         <span>{user.name}</span>
-        <span className={!user.isOnline ? 'action online-status online' : 'action online-status'}>
-          {user.lastVisit ? `(${user.lastVisit})` : ''}
-        </span>
+        {user.isOnline && <span className='action online-status online'/>}
       </div>
       <div className="chat-view-video">
         <button className="action video"/>

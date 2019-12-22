@@ -13,6 +13,7 @@ import UserProfile from '../UserProfile'
 import Chat from '../Chat'
 import ChatView from '../Chat/View'
 import Notifications from '../Notifications'
+import Favorites from '../Favorites'
 
 /**
  * Main component
@@ -30,6 +31,7 @@ const Main = ({ isLoggedIn, userId }) => {
         ? <Switch>
           <Route exact path={url.home} render={() => (<Home/>)}/>
           <Route exact path={url.chat} render={() => (<Chat/>)}/>
+          <Route exact path={url.favorites} render={() => (<Favorites/>)}/>
           <Route exact path={url.notifications} render={() => (<Notifications/>)}/>
           <Route exact path={url.chatView(':userId')} render={() => (<ChatView/>)}/>
           <Route exact path={url.profile(':userId')} render={() => (<UserProfile/>)}/>

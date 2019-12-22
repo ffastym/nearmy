@@ -60,7 +60,14 @@ class Search extends Component {
       searchMessage: <Trans>searchingNearbyUsers</Trans>
     })
 
-    userRequest.getNearbyUsers(coordinates, this.props.searchRadius).then(({ data }) => {
+    const searchData = {
+      coordinates,
+      gender: this.props.gender,
+      radius: this.props.searchRadius,
+      userId: this.props.userId
+    }
+
+    userRequest.getNearbyUsers(searchData).then(({ data }) => {
       if (data.success) {
         let users = data.users
 
@@ -104,6 +111,8 @@ class Search extends Component {
 
 const mapStateToProps = state => {
   return {
+    userId: state.user.id,
+    gender: state.user.gender,
     coordinates: state.user.coordinates,
     nearbyUsers: state.user.nearbyUsers,
     searchRadius: state.user.searchRadius
@@ -148,6 +157,8 @@ Search.propTypes = {
   setCoordinates: PropTypes.func,
   coordinates: PropTypes.object,
   searchRadius: PropTypes.number,
+  userId: PropTypes.string,
+  gender: PropTypes.string,
   nearbyUsers: PropTypes.array
 }
 

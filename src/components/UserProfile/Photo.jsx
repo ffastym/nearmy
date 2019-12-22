@@ -57,7 +57,7 @@ const Photo = ({ avatar, isEditable, setNotify, setAvatar, userId }) => {
       <div className="profile-photo">
         {isEditable &&
           <label className='action edit' htmlFor='profile_photo'>
-            <input id='profile_photo' type='file' accept='image/*' onChange={changePhoto}/>
+            <input id='profile_photo' type='file' className='hidden' accept='image/*' onChange={changePhoto}/>
           </label>}
         {isUploadProcessed
           ? <Loader/>
