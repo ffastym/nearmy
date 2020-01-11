@@ -61,11 +61,9 @@ const Photo = ({ avatar, isEditable, setNotify, setAvatar, userId }) => {
           </label>}
         {isUploadProcessed
           ? <Loader/>
-          : avatar
-            ? <Image cloudName={cloudinary.cloudName} publicId={avatar}>
-              <Transformation height="200" fetchFormat="auto" width="150" gravity='face' crop="fill" />
-            </Image>
-            : <img src='/images/profile.png' alt='profile'/> }
+          : <Image cloudName={cloudinary.cloudName} publicId={avatar}>
+            <Transformation height="200" fetchFormat="auto" width="150" gravity='face' crop="fill" />
+          </Image>}
       </div>
     </div>
   )

@@ -29,7 +29,7 @@ const userRequest = {
       delete user._id
       delete user.__v
 
-      store.dispatch(userActions.logIn(user))
+      store.dispatch(userActions.setUserData(user))
       if (userData.expiresIn) {
         const secure = process.env.NODE_ENV === 'development' ? '' : 'secure;'
         document.cookie = `dibf=${userData.facebookId}; path=/; samesite; ${secure} max-age=${userData.expiresIn}`

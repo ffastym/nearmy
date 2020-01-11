@@ -11,9 +11,9 @@ import RadioGroup from '@material-ui/core/RadioGroup'
 import React, { useState } from 'react'
 import TextField from '@material-ui/core/TextField'
 import userActions from '../../redux/actions/user'
+import userRequest from '../../api/axios/request/user'
 import { connect } from 'react-redux'
 import { useTranslation } from 'react-i18next'
-import userRequest from '../../api/axios/request/user'
 
 /**
  * Editable component
@@ -23,7 +23,7 @@ import userRequest from '../../api/axios/request/user'
  * @returns {*}
  * @constructor
  */
-const Editable = ({ age, gender, name, setNotify, userId }) => {
+const Editable = ({ age, gender, name, setNotify, userId, setNewUserData }) => {
   const { t } = useTranslation()
   const [isValidated, setIsValidated] = useState(false)
   const [userData, setUserData] = useState({ age, gender, name })
@@ -37,8 +37,31 @@ const Editable = ({ age, gender, name, setNotify, userId }) => {
     }
 
     userRequest.updateProfile(userData, userId)
-      .then(() => setNotify('profileWasUpdatedSuccessfully', 'success'))
-      .catch(() => setNotify('profileUpdateError', 'error'))
+      .then(updateProfile)
+      .catch(showUpdateError)
+  }
+
+  /**
+   * Show error message if occurs error on profile updating
+   *
+   * @returns {*}
+   */
+  const showUpdateError = () => setNotify('profileUpdateError', 'error')
+
+  /**
+   * Set new user data
+   *
+   * @param data
+   * 
+   * @returns {*}
+   */
+  const updateProfile = ({ data }) => {
+    if (!data.success) {
+      return showUpdateError()
+    }
+
+    setNewUserData(data.newUserData)
+    setNotify('profileWasUpdatedSuccessfully', 'success')
   }
 
   return (
@@ -95,12 +118,13 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     /**
-     * Set user gender
+     * Update user data
      *
-     * @param gender
+     * @param userData
+     *
      * @returns {*}
      */
-    setGender: gender => dispatch(userActions.setGender(gender)),
+    setNewUserData: userData => dispatch(userActions.setUserData(userData)),
 
     /**
      * Set notify message
@@ -119,7 +143,7 @@ Editable.propTypes = {
   avatar: PropTypes.string,
   gender: PropTypes.string,
   name: PropTypes.string,
-  setGender: PropTypes.func,
+  setNewUserData: PropTypes.func,
   setNotify: PropTypes.func,
   userId: PropTypes.string
 }

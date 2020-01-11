@@ -14,7 +14,7 @@ const cloudinary = {
    * @returns {string}
    */
   getUploadUrl () {
-    return 'https://api.cloudinary.com/v1_1/' + this.cloudName + '/image/upload'
+    return `https://api.cloudinary.com/v1_1/${this.cloudName}/image/upload`
   },
 
   /**

@@ -28,7 +28,7 @@ const initialState = {
  */
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'LOG_IN':
+    case 'SET_USER_DATA':
       subscribeUser()
       state = {
         ...state,

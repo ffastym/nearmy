@@ -477,6 +477,7 @@ a{
 
 .chat-preview-message-text{
     text-overflow:ellipsis;
+    line-height:1.2;
     overflow:hidden;
     margin:2px 0;
 }

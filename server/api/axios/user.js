@@ -59,7 +59,7 @@ const userRequest = {
         { _id: body.userId },
         { $set: { ...body.data } },
         { useFindAndModify: false },
-        err => res.json({ success: !err })
+        err => res.json({ success: !err, newUserData: body.data })
       )
     },
 

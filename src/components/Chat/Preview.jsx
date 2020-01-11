@@ -19,7 +19,7 @@ import url from '../../router/url'
  * @constructor
  */
 const Preview = ({ chat, userId }) => {
-  const MAX_TEXT_LENGTH = 30
+  const MAX_TEXT_LENGTH = 100
   const chatUsers = chat.users
   const lastMessage = chat.messages[0]
   let interlocutor
@@ -30,9 +30,15 @@ const Preview = ({ chat, userId }) => {
     }
   }
 
+  /**
+   * Crop long messages
+   *
+   * @param text
+   * @returns {*}
+   */
   const cropMessage = text => {
     return text.length > MAX_TEXT_LENGTH
-      ? `${text.slice(0, MAX_TEXT_LENGTH)}...`
+      ? text.slice(0, MAX_TEXT_LENGTH)
       : text
   }
 

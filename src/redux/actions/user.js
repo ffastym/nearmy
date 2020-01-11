@@ -3,9 +3,9 @@
  */
 
 const userActions = {
-  logIn (userData) {
+  setUserData (userData) {
     return {
-      type: 'LOG_IN',
+      type: 'SET_USER_DATA',
       userData
     }
   },

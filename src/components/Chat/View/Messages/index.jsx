@@ -19,7 +19,7 @@ const Messages = ({ messages }) => {
 
   useEffect(() => {
     const wrapper = wrapperEl.current
-    wrapper.scrollTo(0, wrapper.scrollHeight)
+    wrapper.scrollTop = wrapper.scrollHeight
   })
 
   return (

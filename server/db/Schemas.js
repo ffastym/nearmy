@@ -10,7 +10,11 @@ const Schemas = {
   UserSchema: new Schema(
     {
       age: Number,
-      avatar: String,
+      avatar: {
+        type: String,
+        required: true,
+        default: 'battle/uaawqnq3hirlfimfr431'
+      },
       coordinates: {
         type: Array,
         select: false

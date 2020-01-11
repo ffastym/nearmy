@@ -32,6 +32,17 @@ const Actions = ({ user, userId }) => {
     setImageFile(file)
   }
 
+  /**
+   *
+   * @param e
+   * @returns {boolean|void|undefined}
+   */
+  const sendMessageIfButtonIsEnter = (e) => {
+    if (e.key === 'Enter') {
+      return sendMessage()
+    }
+  }
+
   const sendMessage = () => {
     if (message.length === 0) {
       return false
@@ -67,7 +78,8 @@ const Actions = ({ user, userId }) => {
           contentEditable
           ref={messageInput}
           suppressContentEditableWarning
-          onInput={e => setMessage(e.target.innerHTML)}/>
+          onInput={e => setMessage(e.target.innerText)}
+          onKeyPress={sendMessageIfButtonIsEnter}/>
       </div>
       <button type='button' className="action send-message" onClick={sendMessage}/>
     </div>
