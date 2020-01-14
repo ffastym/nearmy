@@ -3,22 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bdc1a47f-c4fd-4538-b105-0ae011fc4e71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/profile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/axios/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/axios/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/db/Schemas.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/Schemas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/axios/request/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axios/request/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/cloudinary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/cloudinary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/google/mapsAPI.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/Preview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/Preview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Actions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/Actions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/scss/Preview.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/Preview.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserProfile/Editable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserProfile/Editable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserProfile/Photo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserProfile/Photo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/db/connectToDb.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/connectToDb.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,6 +90,18 @@
       <recent name="D:\WEB\react\nearme\src\redux\reducers" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -176,18 +176,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -255,6 +243,8 @@
       <workItem from="1578515824842" duration="1507000" />
       <workItem from="1578591184558" duration="599000" />
       <workItem from="1578748158859" duration="9524000" />
+      <workItem from="1578902946195" duration="2597000" />
+      <workItem from="1578992908079" duration="355000" />
     </task>
     <servers />
   </component>
