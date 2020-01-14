@@ -4,7 +4,7 @@
 import mongoose from 'mongoose'
 
 const dbRoute = process.env.NODE_ENV === 'production'
-  ? 'mongodb://ffastym:Tt239allo@ds231941.mlab.com:63368/heroku_k9lpkk6r'
+  ? 'mongodb://ffastym:Tt239allo@ds263368.mlab.com:63368/heroku_k9lpkk6r'
   : 'mongodb://localhost:27017/nearme'
 
 mongoose.connect(dbRoute, {

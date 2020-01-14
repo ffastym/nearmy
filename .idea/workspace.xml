@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bdc1a47f-c4fd-4538-b105-0ae011fc4e71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/axios/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/axios/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/db/connectToDb.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/connectToDb.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -168,9 +169,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.watch:css" />
         <item itemvalue="npm.devserver" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.watch:css" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.build:css" />
       </list>
@@ -244,7 +245,7 @@
       <workItem from="1578591184558" duration="599000" />
       <workItem from="1578748158859" duration="9524000" />
       <workItem from="1578902946195" duration="2597000" />
-      <workItem from="1578992908079" duration="355000" />
+      <workItem from="1578992908079" duration="2001000" />
     </task>
     <servers />
   </component>
@@ -347,6 +348,16 @@
     <state x="2132" y="239" key="run.anything.popup/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1577023474053" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/api/axios/user.js</url>
+          <line>40</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="js.build_tools.npm">
         <watch expression="data" language="JavaScript" />

@@ -34,10 +34,10 @@ const userRequest = {
     /**
      * Set user coordinates into database
      *
-     * @param userId
      * @param coordinates
+     * @param userId
      */
-    setCoordinates (userId, coordinates) {
+    setCoordinates (coordinates, userId) {
       Models.User.findOneAndUpdate(
         { _id: userId },
         { $set: { coordinates } },
