@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdc1a47f-c4fd-4538-b105-0ae011fc4e71" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/api/axios/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/axios/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/io.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/io.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/db/Schemas.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/Schemas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/db/connectToDb.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/db/connectToDb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/axios/request/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/axios/request/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/Preview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/Preview.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/Messages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/View/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/dictionary/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/dictionary/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/dictionary/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/dictionary/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/dictionary/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/dictionary/uk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/user.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.server-run">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -112,16 +123,6 @@
       <command value="run" />
       <scripts>
         <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="build:css" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build:css" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -157,6 +158,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="server-run" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server-run" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="watch:css" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -169,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.server-run" />
         <item itemvalue="npm.devserver" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.watch:css" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="npm.build:css" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +256,7 @@
       <workItem from="1578591184558" duration="599000" />
       <workItem from="1578748158859" duration="9524000" />
       <workItem from="1578902946195" duration="2597000" />
-      <workItem from="1578992908079" duration="2001000" />
+      <workItem from="1578992908079" duration="14212000" />
     </task>
     <servers />
   </component>

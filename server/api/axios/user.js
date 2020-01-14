@@ -153,7 +153,7 @@ const userRequest = {
       let userData = req.body
 
       Models.User.findOne({ facebookId: userData.facebookId })
-        .select(['+facebookId', 'age', 'gender', 'name', 'avatar'])
+        .select(['+facebookId', 'age', 'gender', 'name', 'avatar', 'newChats'])
         .populate('notifications')
         .exec((err, userDoc) => {
           if (err) {
@@ -166,6 +166,20 @@ const userRequest = {
 
           User.save(err => res.json({ success: !err, user: User }))
         })
+    },
+
+    /**
+     * Set chat as already read
+     *
+     * @param req
+     * @param res
+     */
+    setChatAsRead (req, res) {
+      let data = req.body
+
+      Models.User.findOneAndUpdate({ _id: data.userId }, { $pull: { newChats: data.chatId } }, err => {
+        return res.json({ success: !err, chatId: data.chatId })
+      })
     },
 
     /**

@@ -59,6 +59,18 @@ const userRequest = {
   },
 
   /**
+   * Set chat as already read
+   *
+   * @param userId
+   * @param chatId
+   *
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  setChatAsRead: (userId, chatId) => {
+    return axios.post(config.getUrl('setChatAsRead'), { userId, chatId })
+  },
+
+  /**
    * Set user gender (use in social login)
    *
    * @param id

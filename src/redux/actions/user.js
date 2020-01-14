@@ -11,6 +11,19 @@ const userActions = {
   },
 
   /**
+   * Exclude chat from newChats list
+   *
+   * @param chatId
+   * @returns {{chatId: *, type: string}}
+   */
+  setChatAsRead (chatId) {
+    return {
+      type: 'SET_CHAT_AS_READ',
+      chatId
+    }
+  },
+
+  /**
    * Set users search radius
    *
    * @param radius

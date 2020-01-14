@@ -170,11 +170,18 @@ const io = {
           let userSocketId = this.users[userId]
 
           if (userSocketId) {
-            return this.io.to(userSocketId).emit('sendMessage', Message)
+            this.io.to(userSocketId).emit('sendMessage', Message)
           }
 
           for (let user of chat.users) {
             if (user._id.toString() === message.receiverId) {
+              user.newChats.push(message.senderId)
+              user.save()
+
+              if (!userSocketId) {
+                return
+              }
+
               const subscription = user.subscription
 
               if (subscription) {

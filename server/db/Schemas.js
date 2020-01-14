@@ -31,8 +31,7 @@ const Schemas = {
       }],
       gender: {
         type: String,
-        required: true,
-        select: true
+        required: true
       },
       name: {
         type: String,
@@ -47,6 +46,10 @@ const Schemas = {
         type: Schema.Types.ObjectId,
         ref: 'Notification',
         select: false
+      }],
+      newChats: [{
+        type: String,
+        required: true
       }],
       photos: Array,
       subscription: Object

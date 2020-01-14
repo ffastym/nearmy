@@ -10,6 +10,7 @@ const initialState = {
   ageRange: [20, 25],
   avatar: null,
   coordinates: null,
+  newChats: [],
   gender: null,
   id: null,
   name: null,
@@ -39,6 +40,12 @@ const userReducer = (state = initialState, action) => {
       state = {
         ...state,
         avatar: action.avatar
+      }
+      break
+    case 'SET_CHAT_AS_READ':
+      state = {
+        ...state,
+        newChats: state.newChats.filter(id => id !== action.chatId)
       }
       break
     case 'SET_SEARCH_RADIUS':

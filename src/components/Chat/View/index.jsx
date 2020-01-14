@@ -57,7 +57,7 @@ const ChatView = ({ userId, match, location, messages, setMessages, changeLayout
   return (
     <div className="chat-view">
       <Header user={interlocutor}/>
-      <Messages messages={chatMessages} />
+      <Messages messages={chatMessages} chatId={chatId} />
       <Actions user={interlocutor}/>
     </div>
   )

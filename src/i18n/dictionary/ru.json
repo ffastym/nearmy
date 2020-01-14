@@ -15,6 +15,7 @@
 		"pageNotFound": "Страницу не найдено",
 		"profileWasUpdatedSuccessfully": "Ваш профиль успешно обновлен",
 		"returnHome": "Вернутся на главную",
+	    "Save": "Сохранить",
 		"searchingNearbyUsers": "Ищем пользователей рядом...",
 		"searchRadius": "Радиус поиска: {{val}} км",
 		"setYourInfo": "Пожалуйста, сперва заполните свой профиль",

@@ -16,6 +16,7 @@
 		"pageNotFound": "Page not found",
 		"profileWasUpdatedSuccessfully": "Profile was updated successfully",
 		"returnHome": "Back to home",
+	    "Save": "Save",
 		"searchingNearbyUsers": "Searching nearby users...",
 		"searchRadius": "Search radius: {{val}} km",
 		"setYourInfo": "Please, at first, set information about yourself",

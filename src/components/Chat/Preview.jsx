@@ -1,33 +1,46 @@
 /**
  * @author Yuriy Matviyuk
  */
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cloudinary from '../../api/cloudinary'
 import { Image, Transformation } from 'cloudinary-react'
 import { NavLink } from 'react-router-dom'
 import url from '../../router/url'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Preview component
  *
  * @param chat
  * @param userId
+ * @param messages
+ * @param newChats
  *
  * @returns {*}
  * @constructor
  */
-const Preview = ({ chat, userId }) => {
+const Preview = ({ chat, userId, messages, newChats }) => {
+  const { t } = useTranslation()
   const MAX_TEXT_LENGTH = 100
   const chatUsers = chat.users
-  const lastMessage = chat.messages[0]
+  const [isNew, setIsNew] = useState(false)
   let interlocutor
 
   for (let user of chatUsers) {
     if (user._id !== userId) {
       interlocutor = user
+      break
     }
+  }
+
+  let interlocutorId = interlocutor._id
+  let interlocutorMessages = messages[interlocutorId]
+  let lastMessage = interlocutorMessages ? interlocutorMessages[interlocutorMessages.length - 1] : chat.messages[0]
+
+  if (!isNew && newChats.includes(interlocutorId)) {
+    setIsNew(true)
   }
 
   /**
@@ -56,13 +69,16 @@ const Preview = ({ chat, userId }) => {
           <div className="chat-preview-date">{new Date(lastMessage.date).toISOString().slice(0, 10)}</div>
         </div>
       </div>
+      {isNew && <span className="is-new">{t('New')}</span>}
     </NavLink>
   )
 }
 
 const mapStateToProps = state => {
   return {
-    userId: state.user.id
+    userId: state.user.id,
+    messages: state.chat.messages,
+    newChats: state.user.newChats
   }
 }
 
@@ -72,7 +88,9 @@ const mapDispatchToProps = dispatch => {
 
 Preview.propTypes = {
   chat: PropTypes.object.isRequired,
-  userId: PropTypes.string
+  newChats: PropTypes.array,
+  userId: PropTypes.string,
+  messages: PropTypes.object
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Preview)

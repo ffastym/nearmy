@@ -16,6 +16,7 @@
 		"pageNotFound": "Сторінку не знайдено",
 		"profileWasUpdatedSuccessfully": "Ваш профіль успішно оновлено",
 		"returnHome": "Повернутися на головну",
+	    "Save": "Зберегти",
 		"searchingNearbyUsers": "Шукаємо користувачів поряд...",
 		"searchRadius": "Радіус пошуку: {{val}} км",
 		"setYourInfo": "Будь ласка, спершу заповніть свій профіль",
