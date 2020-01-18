@@ -10,7 +10,7 @@ const initialState = {
   ageRange: [20, 25],
   avatar: null,
   coordinates: null,
-  newChats: [],
+  newChats: new Set(),
   gender: null,
   id: null,
   name: null,
@@ -35,6 +35,10 @@ const userReducer = (state = initialState, action) => {
         ...state,
         ...action.userData
       }
+
+      if (state.newChats) {
+        state.newChats = new Set(state.newChats)
+      }
       break
     case 'SET_AVATAR':
       state = {
@@ -44,9 +48,21 @@ const userReducer = (state = initialState, action) => {
       break
     case 'SET_CHAT_AS_READ':
       state = {
-        ...state,
-        newChats: state.newChats.filter(id => id !== action.chatId)
+        ...state
       }
+
+      let prevNewChats = new Set([...state.newChats])
+      prevNewChats.delete(action.chatId)
+      state.newChats = prevNewChats
+      break
+    case 'SET_CHAT_AS_NEW':
+      state = {
+        ...state
+      }
+
+      let newChats = new Set([...state.newChats])
+      newChats.add(action.chatId)
+      state.newChats = newChats
       break
     case 'SET_SEARCH_RADIUS':
       state = {

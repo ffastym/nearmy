@@ -28,7 +28,7 @@ const Messages = ({ messages, chatId, newChats, setChatAsRead, userId }) => {
     wrapper.scrollTop = wrapper.scrollHeight
   })
 
-  if (newChats.includes(chatId)) {
+  if (newChats.has(chatId)) {
     userRequest.setChatAsRead(userId, chatId).then(({ data }) => data.success && setChatAsRead(data.chatId))
   }
 
@@ -57,7 +57,7 @@ Messages.propTypes = {
   userId: PropTypes.string,
   messages: PropTypes.array,
   setChatAsRead: PropTypes.func,
-  newChats: PropTypes.array
+  newChats: PropTypes.object
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Messages)

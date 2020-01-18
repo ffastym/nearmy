@@ -3,6 +3,7 @@
  */
 import socketIo from 'socket.io'
 import Models from '../db/Models'
+import chatMessage from '../chat/message'
 import notification from '../middleware/push-notifications'
 
 /**
@@ -118,83 +119,46 @@ const io = {
         }
       }
     },
-    
+
     /**
      * Send chat message event
      *
      * @param message
      */
-    sendMessage (message) {
-      const users = [message.senderId, message.receiverId].sort()
+    async sendMessage (message) {
+      let Message = await chatMessage.create(message)
 
-      let Message = new Models.Message({
-        text: message.text,
-        sender: message.senderId,
-        receiver: message.receiverId,
-        date: new Date()
-      })
+      if (!Message) {
+        return console.log(`Can't Create message`)
+      }
 
-      Message.save(err => {
-        if (err) {
-          return console.log('Message saving error ---> ', err)
-        }
-      })
+      let receiverId = Message.receiver.toString()
+      let senderId = Message.sender.toString()
+      let receiverSocketId = this.users[receiverId]
+      let senderSocketId = this.users[senderId]
 
-      Models.Chat.findOneAndUpdate(
-        { users },
-        { $push: { messages: Message._id } },
-        { useFindAndModify: false }
-      ).populate('users').exec((err, Chat) => {
-        if (err) {
-          return console.log('chat search error ---> ', err)
-        }
+      const receiverModel = await chatMessage.getReceiverModel(receiverId)
 
-        let chat = Chat
+      if (!receiverModel) {
+        return console.log(`Can't find receiver`)
+      }
 
-        if (!Chat) {
-          let Chat = new Models.Chat({
-            users,
-            messages: [Message._id]
+      chatMessage.pushSenderIdToNewChats(receiverModel, senderId)
+      this.io.to(senderSocketId).emit('sendMessage', Message)
+
+      if (!receiverSocketId) {
+        const subscription = receiverModel.subscription
+
+        if (subscription) {
+          notification.send(subscription, {
+            type: 'NEW_MESSAGE'
           })
-
-          Chat.save(err => {
-            if (err) {
-              return console.log('Chat creating error ---> ', err)
-            }
-          })
-
-          chat = Chat
         }
 
-        users.forEach(userId => {
-          let userSocketId = this.users[userId]
+        return
+      }
 
-          if (userSocketId) {
-            this.io.to(userSocketId).emit('sendMessage', Message)
-          }
-
-          for (let user of chat.users) {
-            if (user._id.toString() === message.receiverId) {
-              user.newChats.push(message.senderId)
-              user.save()
-
-              if (!userSocketId) {
-                return
-              }
-
-              const subscription = user.subscription
-
-              if (subscription) {
-                notification.send(subscription, {
-                  type: 'NEW_MESSAGE'
-                })
-              }
-
-              break
-            }
-          }
-        })
-      })
+      this.io.to(receiverSocketId).emit('sendMessage', Message)
     }
   }
 }

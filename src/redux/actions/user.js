@@ -24,6 +24,19 @@ const userActions = {
   },
 
   /**
+   * Add chat to the newChats list
+   *
+   * @param chatId
+   * @returns {{chatId: *, type: string}}
+   */
+  setChatAsNew (chatId) {
+    return {
+      type: 'SET_CHAT_AS_NEW',
+      chatId
+    }
+  },
+
+  /**
    * Set users search radius
    *
    * @param radius

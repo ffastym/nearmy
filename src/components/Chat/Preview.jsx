@@ -39,7 +39,7 @@ const Preview = ({ chat, userId, messages, newChats }) => {
   let interlocutorMessages = messages[interlocutorId]
   let lastMessage = interlocutorMessages ? interlocutorMessages[interlocutorMessages.length - 1] : chat.messages[0]
 
-  if (!isNew && newChats.includes(interlocutorId)) {
+  if (!isNew && newChats.has(interlocutorId)) {
     setIsNew(true)
   }
 
@@ -88,7 +88,7 @@ const mapDispatchToProps = dispatch => {
 
 Preview.propTypes = {
   chat: PropTypes.object.isRequired,
-  newChats: PropTypes.array,
+  newChats: PropTypes.object,
   userId: PropTypes.string,
   messages: PropTypes.object
 }

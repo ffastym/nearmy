@@ -5,6 +5,7 @@
  */
 import store from '../../redux/store'
 import chatActions from '../../redux/actions/chat'
+import userActions from '../../redux/actions/user'
 
 const events = {
   /**
@@ -13,9 +14,20 @@ const events = {
    * @param message
    */
   sendMessage (message) {
-    let userId = message.sender !== store.getState().user.id
-      ? message.sender
-      : message.receiver
+    let senderId = message.sender
+    let receiverId = message.receiver
+    let userId
+    const state = store.getState()
+
+    if (senderId === state.user.id) {
+      userId = receiverId
+    } else {
+      if (!state.user.newChats.has(senderId)) {
+        store.dispatch(userActions.setChatAsNew(senderId))
+      }
+
+      userId = senderId
+    }
 
     store.dispatch(chatActions.setMessages(message, userId))
   }

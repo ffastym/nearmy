@@ -19,6 +19,15 @@
         font-size: 10px;
     }
 
+    .is-new {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-green-shine;
+        font-style: italic;
+    }
+
     .interlocutor-photo {
         display: flex;
         align-items: center;
