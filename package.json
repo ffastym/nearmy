@@ -91,8 +91,7 @@
 				"build": "react-scripts build && npm run build-sw && npm run clean-cra-sw",
 				"test": "react-scripts test --env=jsdom",
 				"eject": "react-scripts eject",
-				"server-run": "node server/index.js",
-				"start": "npm run build && npm run server-run",
+				"start": "node server/index.js",
 				"lint": "eslint --fix src/**/*.js src/**/*.jsx"
 		},
 		"eslintConfig": {
