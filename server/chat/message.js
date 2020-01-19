@@ -15,6 +15,7 @@ const chatMessage = {
 
     try {
       Message = new Models.Message({
+        image: message.imageId,
         text: message.text,
         sender: message.senderId,
         receiver: message.receiverId,

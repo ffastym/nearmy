@@ -368,6 +368,38 @@ a{
     align-items:flex-end;
 }
 
+.chat-actions-panel .upload-preview{
+        position:relative;
+        margin-right:5px;
+        height:98px;
+        width:80px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+.chat-actions-panel .upload-preview > img{
+            max-height:100%;
+        }
+
+.chat-actions-panel .upload-preview .remove{
+            background:rgba(255,255,255,.8);
+            border-radius:50%;
+            position:absolute;
+            top:-8px;
+            left:-8px;
+            transform:scale(.8);
+        }
+
+.chat-actions-panel .loading{
+        height:100%;
+        margin-left:-4px;
+    }
+
+.chat-actions-panel .loader{
+        margin:auto;
+    }
+
 .chat-message-input-wrapper{
     width:calc(100% - 35px * 2);
     display:flex;
@@ -400,7 +432,7 @@ a{
     }
 
 .chat-message-wrapper:not(.own) .chat-message-view{
-        background:#69807F;
+        background:#2195d3;
         border-bottom-left-radius:0;
     }
 
@@ -409,7 +441,7 @@ a{
     }
 
 .chat-message-wrapper.own .chat-message-view{
-            background:#6a7480;
+            background:#2195d3;
             border-bottom-right-radius:0;
         }
 
@@ -417,7 +449,17 @@ a{
             text-align:right;
         }
 
+.chat-message-wrapper .message-image{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-bottom:5px;
+        cursor:pointer;
+    }
+
 .chat-message-view{
+    display:flex;
+    flex-direction:column;
     padding:7px 10px;
     border-radius:15px;
     color:#FFFFFF;
@@ -425,6 +467,7 @@ a{
 
 .chat-message-text{
     word-break:break-word;
+    display:inline-block;
 }
 
 .chat-message-date{
@@ -661,8 +704,38 @@ a{
         max-height:100%;
     }
 
-.user-profile{
+.profile-photo-wrapper{
+    display:flex;
+    justify-content:center;
+}
+
+.profile-photo-wrapper .profile-photo{
+        position:relative;
+        overflow:hidden;
+        border-radius:15px;
+        height:200px;
+        width:150px;
+    }
+
+.profile-photo-wrapper .profile-photo .edit{
+            position:absolute;
+            right:0;
+            top:0;
+        }
+
+.profile-form{
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    max-width:250px;
+}
+
+.profile-form-actions{
     text-align:center;
+}
+
+.form-field.profile-gender-field{
+    margin-top:10px;
 }
 
 body{
@@ -716,6 +789,16 @@ h1{
     color:#FFFFFF;
     height:15px;
     width:15px;
+}
+
+.overlay{
+    position:fixed;
+    top:0;
+    z-index:200;
+    width:100vw;
+    height:100vh;
+    left:0;
+    background:rgba(0,0,0,.6);
 }
 
 .actions-panel{
@@ -830,6 +913,10 @@ h1{
 
 .action.home:before{
         content:'\f015';
+    }
+
+.action.remove:before{
+        content:'\f00d';
     }
 
 .action.chat:before{

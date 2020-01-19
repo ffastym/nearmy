@@ -52,6 +52,10 @@
         content: $fa-home;
     }
 
+    &.remove:before {
+        content: $fa-x;
+    }
+
     &.chat:before {
         content: $fa-comments-alt;
     }

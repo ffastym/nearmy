@@ -1,7 +1,7 @@
 /**
  * @author Yuriy Matviyuk
  */
-import React, { useEffect } from 'react'
+import React, {useEffect, useState} from 'react'
 import chatRequest from '../../../api/axios/request/chat'
 import Messages from './Messages'
 import PropTypes from 'prop-types'
@@ -31,6 +31,9 @@ const ChatView = ({ userId, match, location, messages, setMessages, changeLayout
   const interlocutor = location.state.user
   const chatId = interlocutor._id
   const chatMessages = messages[chatId]
+  const [headerHeight, setHeaderHeight] = useState(0)
+  const [actionsHeight, setActionsHeight] = useState(0)
+  const messagesHeight = `calc(100vh - ${headerHeight}px - ${actionsHeight}px)`
 
   if (!isCustomLayout) {
     changeLayout(true)
@@ -56,9 +59,9 @@ const ChatView = ({ userId, match, location, messages, setMessages, changeLayout
 
   return (
     <div className="chat-view">
-      <Header user={interlocutor}/>
-      <Messages messages={chatMessages} chatId={chatId} />
-      <Actions user={interlocutor}/>
+      <Header user={interlocutor} setHeaderHeight={setHeaderHeight}/>
+      <Messages messages={chatMessages} chatId={chatId} height={messagesHeight} />
+      <Actions user={interlocutor} setActionsHeight={setActionsHeight}/>
     </div>
   )
 }

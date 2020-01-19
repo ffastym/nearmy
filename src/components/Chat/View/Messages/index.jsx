@@ -16,11 +16,12 @@ import userRequest from "../../../../api/axios/request/user";
  * @param newChats
  * @param setChatAsRead
  * @param userId
+ * @param height
  *
  * @returns {*}
  * @constructor
  */
-const Messages = ({ messages, chatId, newChats, setChatAsRead, userId }) => {
+const Messages = ({ messages, chatId, newChats, setChatAsRead, userId, height }) => {
   const wrapperEl = useRef(null)
 
   useEffect(() => {
@@ -33,7 +34,7 @@ const Messages = ({ messages, chatId, newChats, setChatAsRead, userId }) => {
   }
 
   return (
-    <div className='chat-messages-wrapper' ref={wrapperEl}>
+    <div className='chat-messages-wrapper' ref={wrapperEl} style={{ height }}>
       {messages.map(message => <MessageView key={message._id} message={message}/>)}
     </div>
   )
@@ -53,8 +54,9 @@ const mapDispatchToProps = dispatch => {
 }
 
 Messages.propTypes = {
-  chatId: PropTypes.string,
-  userId: PropTypes.string,
+  chatId: PropTypes.string.isRequired,
+  height: PropTypes.string,
+  userId: PropTypes.string.isRequired,
   messages: PropTypes.array,
   setChatAsRead: PropTypes.func,
   newChats: PropTypes.object

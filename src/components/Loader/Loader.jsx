@@ -20,7 +20,7 @@ const Loader = ({ text, withWrapper }) => {
   return (
     <div className={withWrapper ? 'loader-wrapper loading' : 'loading'}>
       <span className="loader"/>
-      <p className="loader-text">{t(text)}</p>
+      {text && <p className="loader-text">{t(text)}</p>}
     </div>
   )
 }

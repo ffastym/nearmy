@@ -3,6 +3,7 @@
  */
 import appActions from '../../redux/actions/app'
 import Button from '@material-ui/core/Button'
+import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FormLabel from '@material-ui/core/FormLabel'
 import PropTypes from 'prop-types'
@@ -65,43 +66,51 @@ const Editable = ({ age, gender, name, setNotify, userId, setNewUserData }) => {
   }
 
   return (
-    <div>
-      <TextField
-        id="name"
-        className="user-name"
-        label={t('Name')}
-        error={isValidated && !userData.name}
-        value={userData.name ? userData.name : ''}
-        onChange={e => setUserData({ ...userData, name: e.target.value })}
-        margin="normal"
-      />
-      <TextField
-        type='number'
-        min={0}
-        onChange={e => setUserData({ ...userData, age: e.target.value })}
-        id="age"
-        error={isValidated && !userData.age}
-        value={userData.age ? userData.age : ''}
-        className="user-age"
-        label={t('Age')}
-        margin="normal"
-      />
-      <FormLabel component="legend">{t('Gender')}</FormLabel>
-      <RadioGroup
-        aria-label="gender"
-        name="gender"
-        error={isValidated && !userData.gender}
-        value={userData.gender ? userData.gender : ''}
-        onChange={e => setUserData({ ...userData, gender: e.target.value })}>
-        <FormControlLabel value="female" control={<Radio />} label={t('Female')}/>
-        <FormControlLabel value="male" control={<Radio />} label={t('Male')}/>
-      </RadioGroup>
-      <Button href=''
-        onClick={saveProfile}
-        className="primary"
-        variant={'contained'}>
-        {t('Save')}
-      </Button>
+    <div className="profile-form">
+      <FormControl className="form-field">
+        <TextField
+          id="name"
+          className="user-name"
+          label={t('Name')}
+          error={isValidated && !userData.name}
+          value={userData.name ? userData.name : ''}
+          onChange={e => setUserData({ ...userData, name: e.target.value })}
+          margin="normal"
+        />
+      </FormControl>
+      <FormControl className="form-field">
+        <TextField
+          type='number'
+          min={0}
+          onChange={e => setUserData({ ...userData, age: e.target.value })}
+          id="age"
+          error={isValidated && !userData.age}
+          value={userData.age ? userData.age : ''}
+          className="user-age"
+          label={t('Age')}
+          margin="normal"
+        />
+      </FormControl>
+      <FormControl className="form-field profile-gender-field">
+        <FormLabel>{t('Gender')}</FormLabel>
+        <RadioGroup
+          aria-label="gender"
+          name="gender"
+          error={isValidated && !userData.gender}
+          value={userData.gender ? userData.gender : ''}
+          onChange={e => setUserData({ ...userData, gender: e.target.value })}>
+          <FormControlLabel value="female" control={<Radio />} label={t('Female')}/>
+          <FormControlLabel value="male" control={<Radio />} label={t('Male')}/>
+        </RadioGroup>
+      </FormControl>
+      <div className="profile-form-actions">
+        <Button href=''
+          onClick={saveProfile}
+          className="primary"
+          variant={'contained'}>
+          {t('Save')}
+        </Button>
+      </div>
     </div>
   )
 }

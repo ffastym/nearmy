@@ -3,8 +3,8 @@
  *
  * @author Yuriy Matviyuk
  */
-$background-color-own-message: $color-grey-2;
-$background-color-message: $color-purple;
+$background-color-own-message: $color-blue;
+$background-color-message: $color-blue;
 
 .chat-message-wrapper {
     display: block;
@@ -31,9 +31,19 @@ $background-color-message: $color-purple;
             text-align: right;
         }
     }
+
+    .message-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
 }
 
 .chat-message-view {
+    display: flex;
+    flex-direction: column;
     padding: 7px 10px;
     border-radius: 15px;
     color: $color-white;
@@ -41,6 +51,7 @@ $background-color-message: $color-purple;
 
 .chat-message-text {
     word-break: break-word;
+    display: inline-block;
 }
 
 .chat-message-date {

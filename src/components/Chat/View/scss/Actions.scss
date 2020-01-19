@@ -13,6 +13,38 @@ $message-input-max-height: 98px;
     bottom: 0;
     box-shadow: $light-shadow;
     align-items: flex-end;
+
+    .upload-preview {
+        position: relative;
+        margin-right: 5px;
+        height: 98px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > img {
+            max-height: 100%;
+        }
+
+        .remove {
+            background: rgba(255,255,255,.8);
+            border-radius: 50%;
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            transform: scale(.8);
+        }
+    }
+
+    .loading {
+        height: 100%;
+        margin-left: -4px;
+    }
+
+    .loader {
+        margin: auto;
+    }
 }
 
 .chat-message-input-wrapper {

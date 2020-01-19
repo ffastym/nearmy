@@ -4,6 +4,36 @@
  * @author Yuriy Matviyuk
  */
 
-.user-profile {
+.profile-photo-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .profile-photo {
+        position: relative;
+        overflow: hidden;
+        border-radius: $border-radius-base;
+        height: 200px;
+        width: 150px;
+
+        .edit {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+.profile-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+}
+
+.profile-form-actions {
     text-align: center;
+}
+
+.form-field.profile-gender-field {
+    margin-top: 10px;
 }

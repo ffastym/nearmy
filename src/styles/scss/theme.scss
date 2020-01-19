@@ -71,6 +71,16 @@ h1 {
     width: 15px;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    background: $color-black-semi-transparent;
+}
+
 .actions-panel {
     @add-mixin sticky;
     box-shadow: $light-shadow;

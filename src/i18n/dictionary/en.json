@@ -10,6 +10,7 @@
 		"loginError": "Login error. Please, try again",
 		"Male": "Male",
 		"Name": "Name",
+		"New": "New",
 		"nearbyUsersNotFound": "Nearby users not found",
 		"noNotifications": "You haven't new notifications",
 		"numberFoundUsers": "Found {{qty}} users",

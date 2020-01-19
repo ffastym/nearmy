@@ -1,9 +1,9 @@
 /**
  * @author Yuriy Matviyuk
  */
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import PropTypes from 'prop-types'
-import {NavLink, withRouter} from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Image, Transformation } from 'cloudinary-react'
 import cloudinary from '../../../api/cloudinary'
@@ -14,13 +14,22 @@ import url from '../../../router/url'
  *
  * @param user
  * @param history
+ * @param setHeaderHeight
  *
  * @returns {*}
  * @constructor
  */
-const Header = ({ user, history }) => {
+const Header = ({ user, history, setHeaderHeight }) => {
+  const chatViewHeaderRef = useRef(null)
+
+  useEffect(() => {
+    if (chatViewHeaderRef.current) {
+      setHeaderHeight(chatViewHeaderRef.current.clientHeight)
+    }
+  })
+
   return (
-    <div className="chat-view-header">
+    <div className="chat-view-header" ref={chatViewHeaderRef}>
       <div className="chat-back-button">
         <button className="action back" onClick={ history.goBack }/>
       </div>
@@ -50,6 +59,7 @@ const mapDispatchToProps = dispatch => {
 
 Header.propTypes = {
   user: PropTypes.object.isRequired,
+  setHeaderHeight: PropTypes.func,
   history: PropTypes.object.isRequired
 }
 
