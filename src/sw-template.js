@@ -22,8 +22,8 @@ if (typeof importScripts === 'function') {
         cacheName: 'images',
         plugins: [
           new workbox.expiration.Plugin({
-            maxEntries: 60,
-            maxAgeSeconds: 30 * 24 * 60 * 60 // 7 Days
+            maxEntries: 100,
+            maxAgeSeconds: 7 * 24 * 60 * 60 // 7 Days
           })
         ]
       })

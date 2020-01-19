@@ -7,7 +7,8 @@ const buildSW = () => {
     swDest: 'build/sw.js', // this will be created in the build step
     globDirectory: 'build',
     globPatterns: [
-      '***.{js,css,html,png,ttf,eot,woff,woff2,svg}'
+      // eslint-disable-next-line no-useless-escape
+      '**\/*.{js,css,html,png,ttf,eot,woff,woff2,svg}'
     ]
   }).then(({ count, size, warnings }) => {
     // Optionally, log any warnings and details.
