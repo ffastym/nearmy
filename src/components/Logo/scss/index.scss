@@ -2,7 +2,10 @@
  * @author Yuriy Matviyuk
  */
 .logo-wrapper {
-    @add-mixin sticky;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     justify-content: center;
     text-align: center;
 }
@@ -11,7 +14,6 @@
     background: $color-white;
     padding: $padding-base 30px;
     display: inline-block;
-    box-shadow: $light-shadow;
 
     img {
         display: block;
