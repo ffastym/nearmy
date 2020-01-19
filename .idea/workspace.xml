@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdc1a47f-c4fd-4538-b105-0ae011fc4e71" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="bdc1a47f-c4fd-4538-b105-0ae011fc4e71" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -73,13 +70,6 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WEB\react\nearme\src\components\Chat\View\Messages\scss" />
-      <recent name="D:\WEB\react\nearme\public" />
-      <recent name="D:\WEB\react\nearme\src" />
-      <recent name="D:\WEB\react\nearme" />
-      <recent name="D:\WEB\react\nearme\src\redux\reducers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\WEB\react\nearme\server" />
       <recent name="D:\WEB\react\nearme\src" />
@@ -87,8 +77,15 @@
       <recent name="D:\WEB\react\nearme\src\api" />
       <recent name="D:\WEB\react\nearme\src\components\Chat\View" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WEB\react\nearme\public" />
+      <recent name="D:\WEB\react\nearme\src\components\Chat\View\Messages\scss" />
+      <recent name="D:\WEB\react\nearme\src" />
+      <recent name="D:\WEB\react\nearme" />
+      <recent name="D:\WEB\react\nearme\src\redux\reducers" />
+    </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.devserver">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -154,9 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.server-run" />
         <item itemvalue="npm.devserver" />
         <item itemvalue="npm.watch:css" />
+        <item itemvalue="npm.server-run" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.lint" />
       </list>
@@ -245,7 +242,7 @@
       <workItem from="1578992908079" duration="14212000" />
       <workItem from="1579342906754" duration="17528000" />
       <workItem from="1579431159627" duration="12091000" />
-      <workItem from="1579453932368" duration="718000" />
+      <workItem from="1579453932368" duration="11158000" />
     </task>
     <servers />
   </component>
@@ -274,26 +271,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="371" y="105" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1576959871485" />
-    <state width="1185" height="238" key="GridCell.Tab.0.bottom" timestamp="1579454052021">
+    <state width="1185" height="238" key="GridCell.Tab.0.bottom" timestamp="1579456321566">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state width="1238" height="239" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1575222588335" />
-    <state width="1185" height="238" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579454052021" />
-    <state width="1185" height="238" key="GridCell.Tab.0.center" timestamp="1579454052020">
+    <state width="1185" height="238" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579456321566" />
+    <state width="1185" height="238" key="GridCell.Tab.0.center" timestamp="1579456321566">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state width="1238" height="239" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1575222588335" />
-    <state width="1185" height="238" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579454052020" />
-    <state width="1185" height="238" key="GridCell.Tab.0.left" timestamp="1579454052020">
+    <state width="1185" height="238" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579456321566" />
+    <state width="1185" height="238" key="GridCell.Tab.0.left" timestamp="1579456321566">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state width="1238" height="239" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1575222588335" />
-    <state width="1185" height="238" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579454052020" />
-    <state width="1185" height="238" key="GridCell.Tab.0.right" timestamp="1579454052021">
+    <state width="1185" height="238" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579456321566" />
+    <state width="1185" height="238" key="GridCell.Tab.0.right" timestamp="1579456321566">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state width="1238" height="239" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1575222588335" />
-    <state width="1185" height="238" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579454052021" />
+    <state width="1185" height="238" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579456321566" />
     <state width="1185" height="230" key="GridCell.Tab.1.bottom" timestamp="1579368234748">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
@@ -346,10 +343,10 @@
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state x="2000" y="195" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579210665803" />
-    <state x="2194" y="189" width="887" height="766" key="find.popup" timestamp="1579442296869">
+    <state x="2194" y="189" width="887" height="766" key="find.popup" timestamp="1579466507588">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
-    <state x="2194" y="189" width="887" height="766" key="find.popup/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579442296869" />
+    <state x="2194" y="189" width="887" height="766" key="find.popup/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579466507588" />
     <state x="2132" y="239" key="run.anything.popup" timestamp="1577023474053">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
