@@ -9,6 +9,7 @@
     justify-content: center;
 
     .profile-photo {
+        box-shadow: $light-shadow;
         position: relative;
         overflow: hidden;
         border-radius: $border-radius-base;

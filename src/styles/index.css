@@ -382,15 +382,6 @@ a{
             max-height:100%;
         }
 
-.chat-actions-panel .upload-preview .remove{
-            background:rgba(255,255,255,.8);
-            border-radius:50%;
-            position:absolute;
-            top:-8px;
-            left:-8px;
-            transform:scale(.8);
-        }
-
 .chat-actions-panel .loading{
         height:100%;
         margin-left:-4px;
@@ -649,7 +640,49 @@ a{
             content:'\f4d7';
         }
 
+.gallery-small{
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.gallery-small .photo-preview{
+        height:60px;
+        width:60px;
+        margin:5px;
+        border-radius:50%;
+        overflow:hidden;
+        box-shadow:0 0 5px -2px rgba(0,0,0,.7);
+    }
+
+.gallery-small .photo-preview-wrapper{
+            position:relative;
+        }
+
+.gallery-small .add-photo{
+        height:60px;
+        width:60px;
+        position:relative;
+        display:block
+    }
+
+.gallery-small .add-photo:not(.processed):before{
+            position:absolute;
+            cursor:pointer;
+            font-family:Font Awesome;
+            font-size:22px;
+            color:#808080;
+            content:'\f067';
+            width:100%;
+            height:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
 .user-preview{
+    display:block;
     border-radius:15px;
     box-shadow:0 0 5px -2px rgba(0,0,0,.7);
     overflow:hidden;
@@ -706,6 +739,7 @@ a{
 }
 
 .profile-photo-wrapper .profile-photo{
+        box-shadow:0 0 5px -2px rgba(0,0,0,.7);
         position:relative;
         overflow:hidden;
         border-radius:15px;
@@ -911,9 +945,19 @@ h1{
         content:'\f015';
     }
 
-.action.remove:before{
-        content:'\f00d';
+.action.remove{
+        background:rgba(255,255,255,.8);
+        border-radius:50%;
+        position:absolute;
+        top:-8px;
+        right:-8px;
+        box-shadow:0 0 5px -2px rgba(0,0,0,.7);
+        transform:scale(.6)
     }
+
+.action.remove:before{
+            content:'\f00d';
+        }
 
 .action.chat:before{
         content:'\f4b6';

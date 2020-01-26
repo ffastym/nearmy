@@ -33,7 +33,12 @@ const Header = ({ user, history, setHeaderHeight }) => {
       <div className="chat-back-button">
         <button className="action back" onClick={ history.goBack }/>
       </div>
-      <NavLink to={url.profile(user._id)} className="chat-view-user-photo">
+      <NavLink to={
+        {
+          pathname: url.profile(user._id),
+          state: { user }
+        }
+      } className="chat-view-user-photo">
         <Image cloudName={cloudinary.cloudName} publicId={user.avatar}>
           <Transformation height="35" fetchFormat="auto" width="35" gravity='face' crop="fill" />
         </Image>

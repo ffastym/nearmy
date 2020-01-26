@@ -49,6 +49,27 @@ const userRequest = {
   },
 
   /**
+   * Add photo to user's gallery
+   *
+   * @param data
+   *
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  addPhoto: data => {
+    return axios.post(config.getUrl('addPhoto'), data)
+  },
+
+  /**
+   * Remove photo from user's gallery
+   *
+   * @param data
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  removePhoto: data => {
+    return axios.post(config.getUrl('removePhoto'), data)
+  },
+
+  /**
    * Update user profile information
    *
    * @param data

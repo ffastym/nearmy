@@ -1,0 +1,46 @@
+/**
+ * index component's styles
+ *
+ * @author Yuriy Matviyuk
+ */
+
+.gallery-small {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .photo-preview {
+        height: 60px;
+        width: 60px;
+        margin: 5px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: $light-shadow;
+
+        &-wrapper {
+            position: relative;
+        }
+    }
+
+    .add-photo {
+        height: 60px;
+        width: 60px;
+        position: relative;
+        display: block;
+
+        &:not(.processed):before {
+            position: absolute;
+            cursor: pointer;
+            font-family: $font-family-FA;
+            font-size: 22px;
+            color: $color-grey;
+            content: $fa-plus;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

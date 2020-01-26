@@ -13,12 +13,12 @@ import renderer from './middleware/renderer'
 import url from '../src/router/url'
 
 const app = express()
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 const router = express.Router()
 
 connectToDb()
 
-Object.entries(url).forEach(path => {
+Object.values(url).forEach(path => {
   router.get(path, renderer)
 })
 
@@ -40,4 +40,4 @@ if (process.env.NODE_ENV === 'production') {
  */
 listenAxiosRequests(router)
 
-io.listen(app.listen(process.env.PORT || PORT, console.log(`LISTENING ON PORT ${PORT}`)))
+io.listen(app.listen(PORT, console.log(`LISTENING ON PORT ${PORT}`)))

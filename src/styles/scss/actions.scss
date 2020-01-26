@@ -52,8 +52,18 @@
         content: $fa-home;
     }
 
-    &.remove:before {
-        content: $fa-x;
+    &.remove {
+        background: rgba(255,255,255,.8);
+        border-radius: 50%;
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        box-shadow: $light-shadow;
+        transform: scale(.6);
+
+        &:before {
+            content: $fa-x;
+        }
     }
 
     &.chat:before {

@@ -26,15 +26,6 @@ $message-input-max-height: 98px;
         > img {
             max-height: 100%;
         }
-
-        .remove {
-            background: rgba(255,255,255,.8);
-            border-radius: 50%;
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            transform: scale(.8);
-        }
     }
 
     .loading {

@@ -11,6 +11,32 @@ const userActions = {
   },
 
   /**
+   * Add new photo to the gallery
+   *
+   * @param photo
+   * @returns {{photo: *, type: string}}
+   */
+  addPhoto (photo) {
+    return {
+      type: 'ADD_PHOTO',
+      photo
+    }
+  },
+
+  /**
+   * Remove user's photo
+   *
+   * @param photo
+   * @returns {{photo: *, type: string}}
+   */
+  removePhoto (photo) {
+    return {
+      type: 'REMOVE_PHOTO',
+      photo
+    }
+  },
+
+  /**
    * Exclude chat from newChats list
    *
    * @param chatId

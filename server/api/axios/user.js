@@ -125,6 +125,42 @@ const userRequest = {
     },
 
     /**
+     * Add photo to user gallery
+     *
+     * @param req
+     * @param res
+     */
+    addPhoto (req, res) {
+      const data = req.body
+
+      Models.User.findOneAndUpdate(
+        { _id: data.id },
+        { $push: { photos: data.photo } },
+        (err) => {
+          return res.json({ success: !err, photo: data.photo })
+        }
+      )
+    },
+
+    /**
+     * Remove image from user's gallery
+     *
+     * @param req
+     * @param res
+     */
+    removePhoto (req, res) {
+      const data = req.body
+
+      Models.User.findOneAndUpdate(
+        { _id: data.id },
+        { $pull: { photos: data.photo } },
+        (err) => {
+          return res.json({ success: !err, photo: data.photo })
+        }
+      )
+    },
+
+    /**
      * Save user subscription into DB
      *
      * @param req
@@ -153,7 +189,7 @@ const userRequest = {
       let userData = req.body
 
       Models.User.findOne({ facebookId: userData.facebookId })
-        .select(['+facebookId', 'age', 'gender', 'name', 'avatar', 'newChats'])
+        .select(['+facebookId', 'age', 'gender', 'name', 'avatar', 'newChats', 'photos'])
         .populate('notifications')
         .exec((err, userDoc) => {
           if (err) {

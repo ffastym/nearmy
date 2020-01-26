@@ -71,7 +71,6 @@ const Photo = ({ avatar, isEditable, setNotify, setAvatar, userId }) => {
 
 const mapStateToProps = state => {
   return {
-    avatar: state.user.avatar,
     userId: state.user.id
   }
 }

@@ -33,7 +33,12 @@ const UserPreview = ({ user }) => {
   }
 
   return (
-    <div className='user-preview'>
+    <NavLink to={
+      {
+        pathname: url.profile(user._id),
+        state: { user }
+      }
+    } className='user-preview'>
       <div className="user-photo">
         <Image cloudName={cloudinary.cloudName} publicId={user.avatar}>
           <Transformation fetchFormat="auto" aspectRatio="10:15" gravity='face' crop="fill" />
@@ -48,7 +53,7 @@ const UserPreview = ({ user }) => {
         <button className="action like"/>
         <NavLink to={{ pathname: url.chatView(user._id), state: { user } }} className="action chat"/>
       </div>
-    </div>
+    </NavLink>
   )
 }
 

@@ -46,6 +46,18 @@ const userReducer = (state = initialState, action) => {
         avatar: action.avatar
       }
       break
+    case 'ADD_PHOTO':
+      state = {
+        ...state,
+        photos: [...state.photos, action.photo]
+      }
+      break
+    case 'REMOVE_PHOTO':
+      state = {
+        ...state,
+        photos: state.photos.filter(photo => photo !== action.photo)
+      }
+      break
     case 'SET_CHAT_AS_READ':
       state = {
         ...state
