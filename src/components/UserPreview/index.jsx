@@ -20,6 +20,7 @@ import url from '../../router/url'
  */
 const UserPreview = ({ user }) => {
   const { t } = useTranslation()
+  const age = Math.floor((new Date() - new Date(user.dob)) / 31557600000)
 
   /**
    * Get distance to user in km
@@ -46,7 +47,7 @@ const UserPreview = ({ user }) => {
       </div>
       <div className="user-info">
         <p className='user-name'>{user.name}</p>
-        <p className='user-age'>{user.age}</p>
+        <p className='user-age'>{age}</p>
         <p className='user-distance'>{getDistance()}</p>
       </div>
       <div className="user-actions actions">

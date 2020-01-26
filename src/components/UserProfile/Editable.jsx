@@ -3,7 +3,7 @@
  */
 import appActions from '../../redux/actions/app'
 import Button from '@material-ui/core/Button'
-import FormControl from '@material-ui/core/FormControl';
+import FormControl from '@material-ui/core/FormControl'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FormLabel from '@material-ui/core/FormLabel'
 import PropTypes from 'prop-types'
@@ -27,7 +27,7 @@ import { useTranslation } from 'react-i18next'
 const Editable = ({ age, gender, name, setNotify, userId, setNewUserData }) => {
   const { t } = useTranslation()
   const [isValidated, setIsValidated] = useState(false)
-  const [userData, setUserData] = useState({ age, gender, name })
+  const [userData, setUserData] = useState({ gender, name })
   const saveProfile = () => {
     setIsValidated(true)
 
@@ -81,11 +81,10 @@ const Editable = ({ age, gender, name, setNotify, userId, setNewUserData }) => {
       <FormControl className="form-field">
         <TextField
           type='number'
+          disabled
           min={0}
-          onChange={e => setUserData({ ...userData, age: e.target.value })}
           id="age"
-          error={isValidated && !userData.age}
-          value={userData.age ? userData.age : ''}
+          value={age}
           className="user-age"
           label={t('Age')}
           margin="normal"

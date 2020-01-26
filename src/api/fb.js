@@ -14,7 +14,7 @@ const fb = {
             expiresIn: authResponse.expiresIn,
             gender,
             name,
-            age: new Date().getFullYear() - new Date(birthday).getFullYear()
+            dob: birthday
           })
         })
       }

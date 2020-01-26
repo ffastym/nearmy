@@ -2,8 +2,10 @@
   "translation": {
 		"Age": "Age",
 		"ageRange": "Age range:",
+		"AgeWithVal": "Age: {{age}}",
 		"determineYourLocation": "Determine your location...",
 		"distanceInKm": "{{distance}} km",
+		"DistanceWithVal": "Distance: {{distance}}",
 		"Female": "Female",
 		"female": "female",
 		"Gender": "Gender",

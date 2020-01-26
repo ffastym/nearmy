@@ -7,6 +7,7 @@ import storage from '../../helper/storage'
 const searchRadius = storage.getLocalStorage().getItem(storage.searchRadiusKey)
 const initialState = {
   age: null,
+  dob: null,
   ageRange: [20, 25],
   avatar: null,
   coordinates: null,
@@ -39,6 +40,8 @@ const userReducer = (state = initialState, action) => {
       if (state.newChats) {
         state.newChats = new Set(state.newChats)
       }
+
+      state.age = Math.floor((new Date() - new Date(state.dob)) / 31557600000)
       break
     case 'SET_AVATAR':
       state = {

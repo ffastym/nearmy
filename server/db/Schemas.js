@@ -9,7 +9,10 @@ const Schemas = {
    */
   UserSchema: new Schema(
     {
-      age: Number,
+      dob: {
+        type: Date,
+        required: true
+      },
       avatar: {
         type: String,
         required: true,

@@ -189,7 +189,7 @@ const userRequest = {
       let userData = req.body
 
       Models.User.findOne({ facebookId: userData.facebookId })
-        .select(['+facebookId', 'age', 'gender', 'name', 'avatar', 'newChats', 'photos'])
+        .select(['+facebookId', 'dob', 'gender', 'name', 'avatar', 'newChats', 'photos'])
         .populate('notifications')
         .exec((err, userDoc) => {
           if (err) {

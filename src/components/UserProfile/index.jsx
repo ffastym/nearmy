@@ -36,7 +36,6 @@ const mapStateToProps = state => {
   return {
     avatar: state.user.avatar,
     currentUser: state.user,
-    userAge: state.user.age,
     gender: state.user.gender,
     userName: state.user.name
   }
@@ -48,7 +47,6 @@ const mapDispatchToProps = dispatch => {
 
 UserProfile.propTypes = {
   userName: PropTypes.string,
-  userAge: PropTypes.string,
   location: PropTypes.object,
   currentUser: PropTypes.object,
   gender: PropTypes.string,

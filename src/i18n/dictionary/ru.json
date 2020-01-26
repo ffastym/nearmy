@@ -2,8 +2,10 @@
   "translation": {
 		"Age": "Возраст",
 		"ageRange": "Возрастной диапазон:",
+		"AgeWithVal": "Возраст: {{age}}",
 		"determineYourLocation": "Определяем ваше местоположение...",
 		"distanceInKm": "{{distance}} км",
+		"DistanceWithVal": "Расстояние: {{distance}}",
 		"Female": "Женский",
 		"female": "женский",
 		"Gender": "Пол",

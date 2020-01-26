@@ -14,15 +14,15 @@ import appActions from '../../redux/actions/app'
  * Home component
  *
  * @param userId
- * @param userAge
+ * @param dob
  * @param userGender
  * @param setNotify
  *
  * @returns {*}
  * @constructor
  */
-const Home = ({ userId, userAge, userGender, setNotify }) => {
-  if (!userAge || !userGender) {
+const Home = ({ userId, dob, userGender, setNotify }) => {
+  if (!dob || !userGender) {
     setNotify('setYourInfo', 'warning')
     return <Redirect to={{ pathname: url.profile(userId), state: { isEditable: true } }} />
   }
@@ -38,7 +38,7 @@ const Home = ({ userId, userAge, userGender, setNotify }) => {
 const mapStateToProps = state => {
   return {
     userId: state.user.id,
-    userAge: state.user.age,
+    dob: state.user.dob,
     userGender: state.user.gender
   }
 }
@@ -59,7 +59,7 @@ const mapDispatchToProps = dispatch => {
 
 Home.propTypes = {
   userId: PropTypes.string,
-  userAge: PropTypes.number,
+  dob: PropTypes.number,
   userGender: PropTypes.string,
   setNotify: PropTypes.func
 }
