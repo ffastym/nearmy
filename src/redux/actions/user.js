@@ -24,6 +24,21 @@ const userActions = {
   },
 
   /**
+   * Add/remove user to/from favorites list
+   *
+   * @param userId
+   * @param remove
+   * @returns {{type: string, userId: *, remove: boolean}}
+   */
+  updateFavorites (userId, remove = false) {
+    return {
+      type: 'UPDATE_FAVORITES',
+      remove,
+      userId
+    }
+  },
+
+  /**
    * Remove user's photo
    *
    * @param photo

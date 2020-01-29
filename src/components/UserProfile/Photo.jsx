@@ -3,7 +3,7 @@
  */
 import appActions from '../../redux/actions/app'
 import cloudinary from '../../api/cloudinary'
-import Loader from '../Loader/Loader'
+import Loader from '../Loader'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import userActions from '../../redux/actions/user'

@@ -64,6 +64,38 @@ const userRequest = {
     },
 
     /**
+     * Add/remove user to/from list of favorites
+     *
+     * @param req
+     * @param res
+     */
+    toggleFavorites (req, res) {
+      const body = req.body
+      const favoriteId = body.favoriteId
+      const remove = body.remove
+
+      Models.User.findOneAndUpdate(
+        { _id: body.userId },
+        { [remove ? '$pull' : '$push']: { favorites: favoriteId } },
+        { useFindAndModify: false },
+        err => res.json({ success: !err, favoriteId, remove })
+      )
+    },
+
+    async getFavoritesList (req, res) {
+      const User = await Models.User
+        .findOne({ _id: req.body.userId })
+        .populate('favorites')
+        .exec()
+
+      if (!User) {
+        return res.json({ success: false })
+      }
+
+      res.json({ success: true, favorites: User.favorites })
+    },
+
+    /**
      * Get nearby users
      *
      * @param req
@@ -189,7 +221,7 @@ const userRequest = {
       let userData = req.body
 
       Models.User.findOne({ facebookId: userData.facebookId })
-        .select(['+facebookId', 'dob', 'gender', 'name', 'avatar', 'newChats', 'photos'])
+        .select(['+facebookId', 'dob', 'gender', 'name', 'avatar', 'newChats', 'favorites', 'photos'])
         .populate('notifications')
         .exec((err, userDoc) => {
           if (err) {

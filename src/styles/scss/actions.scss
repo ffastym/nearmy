@@ -40,8 +40,30 @@
         content: $fa-video;
     }
 
-    &.like:before {
-        content: $fa-heart;
+    &.like {
+        &:before {
+            content: $fa-heart;
+        }
+
+        &:after {
+            content: '+';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 18px;
+            position: absolute;
+            bottom: 5px;
+            height: 10px;
+            width: 10px;
+            right: 0;
+            color: $color-white;
+        }
+
+        &._remove:after {
+            content: '-';
+            font-size: 22px;
+        }
     }
 
     &.send-message:before {

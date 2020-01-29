@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import socket from '../../../api/io/socket'
 import { useTranslation } from 'react-i18next'
 import cloudinary from '../../../api/cloudinary'
-import Loader from '../../Loader/Loader'
+import Loader from '../../Loader'
 import appActions from '../../../redux/actions/app'
 import { Image, Transformation } from 'cloudinary-react'
 

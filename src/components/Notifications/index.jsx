@@ -34,10 +34,11 @@ const Notifications = ({ notifications }) => {
   return (
     <div className='notifications-wrapper'>
       <h1 className="title">
-        {items.length
-          ? t('youHaveNewNotifications', { qty: items.length.toString(10) })
-          : t('noNotifications')}
+        {t('Notifications')}
       </h1>
+      <p className="empty">
+        {!items.length && t('noNotifications')}
+      </p>
       {items}
     </div>
   )

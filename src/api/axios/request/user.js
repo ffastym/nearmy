@@ -44,9 +44,15 @@ const userRequest = {
    *
    * @returns {Promise<AxiosResponse<T>>}
    */
-  setAvatar: data => {
-    return axios.post(config.getUrl('setAvatar'), data)
-  },
+  setAvatar: data => axios.post(config.getUrl('setAvatar'), data),
+
+  /**
+   * Get list of favorites users
+   *
+   * @param userId
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  getFavoritesList: userId => axios.post(config.getUrl('getFavoritesList'), { userId }),
 
   /**
    * Add photo to user's gallery
@@ -57,6 +63,18 @@ const userRequest = {
    */
   addPhoto: data => {
     return axios.post(config.getUrl('addPhoto'), data)
+  },
+
+  /**
+   * Add user to favorites
+   *
+   * @param userId
+   * @param favoriteId
+   * @param remove
+   * @returns {Promise<AxiosResponse<T>>}
+   */
+  toggleFavorites: (userId, favoriteId, remove = false) => {
+    return axios.post(config.getUrl('toggleFavorites'), { favoriteId, userId, remove })
   },
 
   /**

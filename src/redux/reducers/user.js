@@ -61,6 +61,16 @@ const userReducer = (state = initialState, action) => {
         photos: state.photos.filter(photo => photo !== action.photo)
       }
       break
+    case 'UPDATE_FAVORITES':
+      let favorites = action.remove
+        ? state.favorites.filter(userId => userId !== action.userId)
+        : state.favorites.concat(action.userId)
+
+      state = {
+        ...state,
+        favorites
+      }
+      break
     case 'SET_CHAT_AS_READ':
       state = {
         ...state
