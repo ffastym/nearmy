@@ -2,7 +2,7 @@
  * @author Yuriy Matviyuk
  */
 
-import { getDistance } from 'geolib'
+import distance from '../../helper/distance'
 import Models from '../../db/Models'
 
 const R = 6371 // Radius of the Earth in kilometers
@@ -82,17 +82,27 @@ const userRequest = {
       )
     },
 
+    /**
+     * Get list of favorite users
+     *
+     * @param req
+     * @param res
+     * @returns {Promise<*>}
+     */
     async getFavoritesList (req, res) {
-      const User = await Models.User
-        .findOne({ _id: req.body.userId })
-        .populate('favorites')
-        .exec()
+      const users = await Models.User
+        .find({ _id: { $in: req.body.favoritesIds } })
+        .select(['+coordinates'])
 
-      if (!User) {
+      if (!users) {
         return res.json({ success: false })
       }
 
-      res.json({ success: true, favorites: User.favorites })
+      const favorites = users.map(
+        user => distance.setDistanceToUserModel(user, req.body.coordinates)
+      )
+
+      res.json({ success: true, favorites })
     },
 
     /**
@@ -105,34 +115,21 @@ const userRequest = {
       const data = req.body
       const coordinates = data.coordinates
       const radius = data.radius
-      const formattedCoordinates = [ coordinates.lng, coordinates.lat ]
 
-      userRequest.post.setCoordinates(formattedCoordinates, data.userId)
+      userRequest.post.setCoordinates(coordinates, data.userId)
 
       Models.User.find({
         coordinates: {
           $geoWithin: {
-            $centerSphere: [formattedCoordinates, radius / R]
+            $centerSphere: [coordinates, radius / R]
           }
         },
         gender: { $ne: data.gender }
       }).select(['+coordinates'])
         .exec((err, data) => {
-          let users = []
-
-          data.forEach(user => {
-            let distance = getDistance(
-              { longitude: user._doc.coordinates[0], latitude: user._doc.coordinates[1] },
-              { longitude: coordinates.lng, latitude: coordinates.lat }
-            )
-
-            let userDoc = {
-              ...user._doc,
-              distance: distance < 1000 ? 1 : Math.floor(distance / 1000)
-            }
-            delete userDoc.coordinates
-            users.push(userDoc)
-          })
+          let users = data.map(
+            user => distance.setDistanceToUserModel(user, coordinates)
+          )
 
           return res.json({ success: !err, users })
         })
@@ -221,7 +218,7 @@ const userRequest = {
       let userData = req.body
 
       Models.User.findOne({ facebookId: userData.facebookId })
-        .select(['+facebookId', 'dob', 'gender', 'name', 'avatar', 'newChats', 'favorites', 'photos'])
+        .select(['+facebookId', 'dob', 'gender', 'name', 'coordinates', 'avatar', 'newChats', 'favorites', 'photos'])
         .populate('notifications')
         .exec((err, userDoc) => {
           if (err) {

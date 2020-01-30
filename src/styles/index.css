@@ -681,6 +681,41 @@ a{
             justify-content:center;
         }
 
+.gallery.fullscreen .close{
+        position:absolute;
+        top:10px;
+        right:10px;
+    }
+
+.gallery.fullscreen .image-wrapper{
+       position:absolute;
+       width:100%;
+       display:flex;
+       top:50%;
+       left:50%;
+       justify-content:center;
+       transform:translate(-50%, -50%);
+   }
+
+.gallery.fullscreen .nav{
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%)
+    }
+
+.gallery.fullscreen .nav:before{
+            font-size:33px;
+        }
+
+.gallery.fullscreen .nav.prev{
+            left:10px;
+        }
+
+.gallery.fullscreen .nav.next{
+            right:10px;
+            transform:translateY(-50%) rotate(180deg);
+        }
+
 .user-preview{
     display:block;
     border-radius:15px;
@@ -724,6 +759,42 @@ a{
 
 .user-preview .user-actions .like:before, .user-preview .user-actions .chat:before{
                 text-shadow:0 0 6px rgba(0,0,0,.4);
+            }
+
+.user-preview .user-actions .like:before{
+                color:#ff0043;
+            }
+
+.user-preview .user-actions .like._add:after, .user-preview .user-actions .like._remove:after{
+                    transform:rotate(45deg);
+                    transition:transform .3s;
+                    content:'\f00d';
+                    font-weight:600;
+                    font-family:Font Awesome;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    border-radius:50%;
+                    font-size:12px;
+                    position:absolute;
+                    background:rgba(255,255,255,.8);
+                    box-shadow:0 0 5px -2px rgba(0,0,0,.7);
+                    padding:2px;
+                    bottom:5px;
+                    height:10px;
+                    width:10px;
+                    right:0;
+                    color:#00804e;
+                }
+
+.user-preview .user-actions .like._remove:after{
+                transform:rotate(0deg);
+                line-height:5px;
+                color:#ff0043;
+            }
+
+.user-preview .user-actions .chat:before{
+                color:#00804e;
             }
 
 .user-preview img{
@@ -950,26 +1021,6 @@ h1{
             content:'\f004';
         }
 
-.action.like:after{
-            content:'+';
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            border-radius:50%;
-            font-size:18px;
-            position:absolute;
-            bottom:5px;
-            height:10px;
-            width:10px;
-            right:0;
-            color:#FFFFFF;
-        }
-
-.action.like._remove:after{
-            content:'-';
-            font-size:22px;
-        }
-
 .action.send-message:before{
         content:'\f1d8';
     }
@@ -996,6 +1047,14 @@ h1{
         content:'\f4b6';
     }
 
+.action.nav:before{
+            content:'\f104';
+        }
+
+.action.next{
+        transform:rotate(180deg);
+    }
+
 .action.profile:before{
         content:'\f007';
     }
@@ -1007,6 +1066,10 @@ h1{
 .action.active.edit:before{
             content:'\f00c';
         }
+
+.action.bold{
+        font-weight:bold;
+    }
 
 @media (max-width: calc(768px - 1px)){
 

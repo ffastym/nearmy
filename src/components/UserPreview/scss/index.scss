@@ -47,6 +47,49 @@
                 text-shadow: $icon-shadow;
             }
         }
+
+        .like {
+            &:before {
+                color: $color-red;
+            }
+
+            &._add,
+            &._remove {
+                &:after {
+                    transform: rotate(45deg);
+                    transition: transform .3s;
+                    content: $fa-x;
+                    font-weight: 600;
+                    font-family: $font-family-FA;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    position: absolute;
+                    background: rgba(255,255,255,.8);
+                    box-shadow: $light-shadow;
+                    padding: 2px;
+                    bottom: 5px;
+                    height: 10px;
+                    width: 10px;
+                    right: 0;
+                    color: $color-green;
+                }
+            }
+
+            &._remove:after {
+                transform: rotate(0deg);
+                line-height: 5px;
+                color: $color-red;
+            }
+        }
+
+        .chat {
+            &:before {
+                color: $color-green;
+            }
+        }
     }
 
     img {

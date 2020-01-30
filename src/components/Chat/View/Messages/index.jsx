@@ -5,8 +5,8 @@ import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import MessageView from './Message'
-import userActions from "../../../../redux/actions/user";
-import userRequest from "../../../../api/axios/request/user";
+import userActions from '../../../../redux/actions/user'
+import userRequest from '../../../../api/axios/request/user'
 
 /**
  * Messages component

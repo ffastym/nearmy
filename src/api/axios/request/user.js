@@ -49,10 +49,16 @@ const userRequest = {
   /**
    * Get list of favorites users
    *
-   * @param userId
+   * @param favoritesIds
+   * @param coordinates
    * @returns {Promise<AxiosResponse<T>>}
    */
-  getFavoritesList: userId => axios.post(config.getUrl('getFavoritesList'), { userId }),
+  getFavoritesList: (favoritesIds, coordinates) => {
+    return axios.post(
+      config.getUrl('getFavoritesList'),
+      { favoritesIds, coordinates }
+    )
+  },
 
   /**
    * Add photo to user's gallery

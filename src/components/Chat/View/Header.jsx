@@ -1,7 +1,7 @@
 /**
  * @author Yuriy Matviyuk
  */
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { NavLink, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'

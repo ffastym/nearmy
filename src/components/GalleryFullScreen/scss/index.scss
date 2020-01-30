@@ -1,0 +1,42 @@
+/**
+ * index component's styles
+ *
+ * @author Yuriy Matviyuk
+ */
+
+.gallery.fullscreen {
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+   .image-wrapper {
+       position: absolute;
+       width: 100%;
+       display: flex;
+       top: 50%;
+       left: 50%;
+       justify-content: center;
+       transform: translate(-50%, -50%);
+   }
+
+    .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:before {
+            font-size: 33px;
+        }
+
+        &.prev {
+            left: 10px;
+        }
+
+        &.next {
+            right: 10px;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+}

@@ -5,12 +5,12 @@ import React, { useState, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cloudinary from '../../api/cloudinary'
-import {Image, Transformation} from 'cloudinary-react'
+import { Image, Transformation } from 'cloudinary-react'
 import Loader from '../Loader'
 import userRequest from '../../api/axios/request/user'
 import appActions from '../../redux/actions/app'
 import userActions from '../../redux/actions/user'
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Preview component
@@ -22,11 +22,21 @@ import {useTranslation} from 'react-i18next'
  * @param addPhoto
  * @param removePhoto
  * @param isEditable
+ * @param setFullscreenPhoto
  *
  * @returns {*}
  * @constructor
  */
-const Preview = ({ photo, empty = false, setNotify, userId, addPhoto, removePhoto, isEditable }) => {
+const Preview = ({
+  photo,
+  empty = false,
+  setNotify,
+  userId,
+  addPhoto,
+  removePhoto,
+  isEditable,
+  setFullscreenPhoto
+}) => {
   const [isUploadProcessed, setIsUploadProcessed] = useState(false)
   const { t } = useTranslation()
 
@@ -98,7 +108,9 @@ const Preview = ({ photo, empty = false, setNotify, userId, addPhoto, removePhot
           </label>
           : <Fragment>
             {isEditable && <span className="action remove" onClick={removeImage}/>}
-            <Image cloudName={cloudinary.cloudName} publicId={photo}>
+            <Image cloudName={cloudinary.cloudName}
+              publicId={photo}
+              onClick={() => setFullscreenPhoto(photo)}>
               <Transformation height="60" fetchFormat="auto" width="60" gravity='face' crop="fill" />
             </Image>
           </Fragment>}
@@ -149,6 +161,7 @@ Preview.propTypes = {
   isEditable: PropTypes.bool,
   photo: PropTypes.string,
   removePhoto: PropTypes.func,
+  setFullscreenPhoto: PropTypes.func,
   setNotify: PropTypes.func,
   userId: PropTypes.string
 }

@@ -71,8 +71,8 @@ const UserPreview = ({ user, currentUserId, favorites, setNotify, updateFavorite
         <p className='user-distance'>{getDistance()}</p>
       </div>
       <div className="user-actions actions">
-        <button className={`action like ${remove ? '_remove' : ''}`} onClick={toggleFavorites}/>
-        <NavLink to={{ pathname: url.chatView(profileUserId), state: { user } }} className="action chat"/>
+        <button className={`action like bold ${remove ? '_remove' : '_add'}`} onClick={toggleFavorites}/>
+        <NavLink to={{ pathname: url.chatView(profileUserId), state: { user } }} className="action bold chat"/>
       </div>
     </NavLink>
   )

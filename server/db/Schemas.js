@@ -19,7 +19,7 @@ const Schemas = {
         default: 'battle/uaawqnq3hirlfimfr431'
       },
       coordinates: {
-        type: Array,
+        type: Object,
         select: false
       },
       facebookId: {

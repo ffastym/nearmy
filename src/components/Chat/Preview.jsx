@@ -66,7 +66,7 @@ const Preview = ({ chat, userId, messages, newChats }) => {
         <div className="interlocutor-name">{interlocutor.name}</div>
         <div className="chat-preview-last-message">
           <div className="chat-preview-message-text">{cropMessage(lastMessage.text)}</div>
-          <div className="chat-preview-date">{new Date(lastMessage.date).toISOString().slice(0, 10)}</div>
+          <div className="chat-preview-date">{new Date(lastMessage.date).toLocaleString()}</div>
         </div>
       </div>
       {isNew && <span className="is-new">{t('New')}</span>}

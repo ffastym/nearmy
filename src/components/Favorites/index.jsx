@@ -1,26 +1,26 @@
 /**
  * @author Yuriy Matviyuk
  */
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Loader from '../Loader'
 import userRequest from '../../api/axios/request/user'
 import appActions from '../../redux/actions/app'
 import Preview from '../UserPreview'
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Favorites component
  *
- * @param userId
  * @param setNotify
  * @param favorites
+ * @param coordinates
  *
  * @returns {*}
  * @constructor
  */
-const Favorites = ({ userId, setNotify, favorites }) => {
+const Favorites = ({ setNotify, favorites, coordinates }) => {
   const { t } = useTranslation()
   const [favoritesList, setFavoritesList] = useState([])
   const [isLoadingPrecessed, SetIsLoadingProcessed] = useState(true)
@@ -30,7 +30,7 @@ const Favorites = ({ userId, setNotify, favorites }) => {
   }
 
   async function getFavoritesList () {
-    const { data } = await userRequest.getFavoritesList(userId)
+    const { data } = await userRequest.getFavoritesList(favorites, coordinates)
     SetIsLoadingProcessed(false)
 
     if (!data.success) {
@@ -58,8 +58,8 @@ const Favorites = ({ userId, setNotify, favorites }) => {
 
 const mapStateToProps = state => {
   return {
-    userId: state.user.id,
-    favorites: state.user.favorites
+    favorites: state.user.favorites,
+    coordinates: state.user.coordinates
   }
 }
 
@@ -76,8 +76,8 @@ const mapDispatchToProps = dispatch => {
 }
 
 Favorites.propTypes = {
-  userId: PropTypes.string,
   favorites: PropTypes.array,
+  coordinates: PropTypes.object,
   setNotify: PropTypes.func
 }
 

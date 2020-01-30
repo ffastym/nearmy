@@ -65,7 +65,7 @@ const Radius = ({ searchRadius, setSearchRadius, getNearbyUsers }) => {
         aria-labelledby="radius"
         onChange={changeRadius}
         step={5}
-        min={1}
+        min={5}
         max={100}
       />}
     </Fragment>

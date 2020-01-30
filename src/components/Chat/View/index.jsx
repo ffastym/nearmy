@@ -1,7 +1,7 @@
 /**
  * @author Yuriy Matviyuk
  */
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import chatRequest from '../../../api/axios/request/chat'
 import Messages from './Messages'
 import PropTypes from 'prop-types'

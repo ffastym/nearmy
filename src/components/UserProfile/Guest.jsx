@@ -4,7 +4,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 /**
  * Guest component
