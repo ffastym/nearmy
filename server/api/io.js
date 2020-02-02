@@ -121,6 +121,60 @@ const io = {
     },
 
     /**
+     * Make video answer
+     *
+     * @param data
+     * @param socket
+     */
+    makeVideoAnswer (data, socket) {
+      socket.to(this.users[data.senderId]).emit('madeVideoAnswer', {
+        senderId: data.senderId,
+        answer: data.answer
+      })
+    },
+
+    /**
+     * Make offer to video chat
+     *
+     * @param data
+     * @param socket
+     */
+    makeVideoOffer ({ offer, userId, senderData }, socket) {
+      socket.to(this.users[userId]).emit('madeVideoOffer', { offer, senderData })
+    },
+
+    /**
+     * Stop video streaming
+     *
+     * @param senderId
+     * @param socket
+     */
+    declineVideoChat ({ senderId }, socket) {
+      socket.to(this.users[senderId]).emit('stopStream')
+    },
+
+    /**
+     * Cancel video chat offer
+     *
+     * @param receiverId
+     * @param socket
+     */
+    cancelVideoChat ({ receiverId }, socket) {
+      socket.to(this.users[receiverId]).emit('cancelIncomingCall')
+    },
+
+    /**
+     * Add RTC iceCandidate (required for communication between users)
+     *
+     * @param candidate
+     * @param userId
+     * @param socket
+     */
+    addCandidate ({ candidate, userId }, socket) {
+      socket.to(this.users[userId]).emit('addCandidate', candidate)
+    },
+
+    /**
      * Send chat message event
      *
      * @param message

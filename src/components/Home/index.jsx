@@ -59,7 +59,7 @@ const mapDispatchToProps = dispatch => {
 
 Home.propTypes = {
   userId: PropTypes.string,
-  dob: PropTypes.number,
+  dob: PropTypes.string,
   userGender: PropTypes.string,
   setNotify: PropTypes.func
 }

@@ -3,8 +3,8 @@
  */
 import cloudinary from '../../api/cloudinary'
 import PropTypes from 'prop-types'
-import { NavLink } from 'react-router-dom'
-import React from 'react'
+import { NavLink, Redirect } from 'react-router-dom'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { Image, Transformation } from 'cloudinary-react'
 import { useTranslation } from 'react-i18next'
@@ -27,9 +27,14 @@ import userActions from '../../redux/actions/user'
  */
 const UserPreview = ({ user, currentUserId, favorites, setNotify, updateFavorites }) => {
   const { t } = useTranslation()
+  const [isRedirectToChat, redirectToChat] = useState(false)
   const age = Math.floor((new Date() - new Date(user.dob)) / 31557600000)
   const profileUserId = user._id
   const remove = favorites.includes(profileUserId)
+
+  if (isRedirectToChat) {
+    return <Redirect to={{ pathname: url.chatView(profileUserId), state: { user } }}/>
+  }
 
   /**
    * Get distance to user in km
@@ -40,6 +45,10 @@ const UserPreview = ({ user, currentUserId, favorites, setNotify, updateFavorite
     const distance = user.distance
 
     return t(distance === 1 ? 'less1km' : 'distanceInKm', { distance })
+  }
+
+  const setRedirectToProfile = () => {
+    redirectToChat(true)
   }
 
   const toggleFavorites = async (e) => {
@@ -72,7 +81,7 @@ const UserPreview = ({ user, currentUserId, favorites, setNotify, updateFavorite
       </div>
       <div className="user-actions actions">
         <button className={`action like bold ${remove ? '_remove' : '_add'}`} onClick={toggleFavorites}/>
-        <NavLink to={{ pathname: url.chatView(profileUserId), state: { user } }} className="action bold chat"/>
+        <button type='button' className="action bold chat" onClick={setRedirectToProfile}/>
       </div>
     </NavLink>
   )

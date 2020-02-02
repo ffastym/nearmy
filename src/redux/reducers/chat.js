@@ -2,7 +2,9 @@
  * @author Yuriy Matviyuk
  */
 const initialState = {
-  messages: {}
+  messages: {},
+  incomingCall: null,
+  mediaStream: null
 }
 
 /**
@@ -22,6 +24,33 @@ const chatReducer = (state = initialState, action) => {
         messages: {
           ...state.messages,
           [chatId]: [...oldMessages, ...newMessages]
+        }
+      }
+      break
+    case 'SET_INCOMING_CALL_DATA':
+      state = {
+        ...state,
+        incomingCall: action.data
+      }
+      break
+    case 'SET_MEDIA_STREAM':
+      const stream = action.stream
+
+      if (!stream) {
+        state.mediaStream.getTracks().forEach(track => track.stop())
+      }
+
+      state = {
+        ...state,
+        mediaStream: stream
+      }
+      break
+    case 'ACCEPT_VIDEO_CALL':
+      state = {
+        ...state,
+        incomingCall: {
+          ...state.incomingCall,
+          accepted: true
         }
       }
       break

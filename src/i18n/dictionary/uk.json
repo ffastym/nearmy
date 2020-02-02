@@ -1,9 +1,11 @@
 {
   "translation": {
+		"Accept": "Прийняти",
 		"addToFavoritesError": "Під час додавання користувача до списку улюблених трапилася помилка. Будь ласка, спробуйте пізніше",
 		"Age": "Вік",
 		"ageRange": "Віковий діапазон:",
 		"AgeWithVal": "Вік: {{age}}",
+		"Cancel": "Скасувати",
 		"determineYourLocation": "Визначаємо ваше розташування...",
 		"distanceInKm": "{{distance}} км",
 		"DistanceWithVal": "Відстань: {{distance}}",
@@ -11,6 +13,7 @@
 		"favoritesListEmpty": "Ваш список улюблених поки що пустий",
 		"Female": "Жіноча",
 		"female": "жіноча",
+		"interlocutorNotAnswer": "Користувач не відповідає. Спробуйте перетелефонувати пізніше",
 		"Gender": "Стать",
 		"GenderWithVal": "Стать: {{gender}}",
 		"less1km": "< 1 км",
@@ -28,6 +31,8 @@
 		"photoRemovedSuccessfully": "Фото успішно видалено",
 		"photoRemovingError": "При видаленні фото сталася помилка. Спробуйте, будь ласка, пізніше",
 		"profileWasUpdatedSuccessfully": "Ваш профіль успішно оновлено",
+		"proposeVideoChat": "Прононує розпочати відеочат",
+		"Reject": "Відхилити",
 		"removeFromFavoritesError": "Під час видалення користувача зі списку улюблених трапилася помилка. Будь ласка, спробуйте пізніше",
 		"returnHome": "Повернутися на головну",
 		"Save": "Зберегти",

@@ -1,9 +1,11 @@
 {
   "translation": {
+		"Accept": "Accept",
 		"addToFavoritesError": "An error occurs, during adding user to the favorites list. Please, try again later",
 		"Age": "Age",
 		"ageRange": "Age range:",
 		"AgeWithVal": "Age: {{age}}",
+		"Cancel": "Cancel",
 		"determineYourLocation": "Determine your location...",
 		"distanceInKm": "{{distance}} km",
 		"DistanceWithVal": "Distance: {{distance}}",
@@ -11,6 +13,7 @@
 		"favoritesListEmpty": "Your favorites list is empty yet",
 		"Female": "Female",
 		"female": "female",
+		"interlocutorNotAnswer": "User not answer. Try again later",
 		"Gender": "Gender",
 		"GenderWithVal": "Gender: {{gender}}",
 		"less1km": "< 1 km",
@@ -28,6 +31,8 @@
 		"photoRemovedSuccessfully": "Photo removed successfully",
 		"photoRemovingError": "Sorry, photo wasn't removed. Please, try again later",
 		"profileWasUpdatedSuccessfully": "Profile was updated successfully",
+		"proposeVideoChat": "Propose to start video chat",
+		"Reject": "Reject",
 		"removeFromFavoritesError": "An error occurs, during removing user from the favorites list. Please, try again later",
 		"returnHome": "Back to home",
 		"Save": "Save",

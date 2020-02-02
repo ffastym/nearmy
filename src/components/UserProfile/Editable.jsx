@@ -147,7 +147,7 @@ const mapDispatchToProps = dispatch => {
 }
 
 Editable.propTypes = {
-  age: PropTypes.string,
+  age: PropTypes.number,
   avatar: PropTypes.string,
   gender: PropTypes.string,
   name: PropTypes.string,

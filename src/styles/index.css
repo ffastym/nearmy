@@ -413,6 +413,80 @@ a{
         outline:none;
     }
 
+.video-chat{
+    position:relative;
+}
+
+.video-chat .toggle-mode{
+        position:absolute;
+        top:calc(50% + 10px);
+        right:10px;
+        z-index:10;
+        border-radius:5px;
+        box-shadow:0 0 5px -2px rgba(0,0,0,.7);
+        background:rgba(255,255,255,.7);
+    }
+
+.video-chat video{
+        max-width:100%;
+        max-height:100%;
+        display:block;
+        margin:0 auto;
+    }
+
+.chat-view.video:not(.single) .video-chat{
+            height:calc(100vh - 90px);
+        }
+
+.chat-view.video:not(.single) .video-chat video{
+                height:50%;
+            }
+
+.chat-view.video:not(.single) .toggle-mode:before{
+            content:'\f4b6';
+        }
+
+.chat-view.video:not(.single) .chat-messages-wrapper{
+            display:none;
+        }
+
+.chat-view.single .video-chat{
+            height:calc((100vh - 90px) / 2) !important;
+        }
+
+.chat-view.single .video-chat-request{
+            height:100%;
+        }
+
+.chat-view.single .toggle-mode{
+            top:calc(100% + 10px)
+        }
+
+.chat-view.single .toggle-mode:before{
+                content:'\f03d';
+            }
+
+.chat-view.single .chat-messages-wrapper{
+            height:calc((100vh - 90px) / 2) !important;
+            border-top:1px solid #efefef;
+        }
+
+.video-chat-request{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:50%;
+}
+
+.video-chat-request-photo{
+        margin:20px auto;
+        border-radius:50%;
+        box-shadow:0 0 5px -2px rgba(0,0,0,.7);
+        overflow:hidden;
+    }
+
 .chat-message-wrapper{
     position:relative;
     display:block;
@@ -600,6 +674,52 @@ a{
     text-align:center;
 }
 
+.chat-call-offer-user{
+    position:absolute;
+    text-align:center;
+    top:50%;
+    left:50%;
+    background:#FFFFFF;
+    box-shadow:0 0 5px -2px rgba(0,0,0,.7);
+    border-radius:15px;
+    padding:15px;
+    transform:translate(-50%, -50%);
+}
+
+.chat-call-offer-user-photo{
+        display:inline-block;
+        border-radius:50%;
+        overflow:hidden;
+        box-shadow:0 0 5px -2px rgba(0,0,0,.7);
+    }
+
+.chat-call-offer-user-photo img{
+            margin:0 auto;
+        }
+
+.chat-call-offer-user-name{
+        font-size:22px;
+        margin:10px 0;
+    }
+
+.chat-call-offer-user-actions{
+        display:flex;
+        margin-top:5px;
+    }
+
+.chat-call-offer-user-actions .button{
+            margin:5px;
+            color:#FFFFFF;
+        }
+
+.chat-call-offer-user-actions .primary{
+            background:#23c625;
+        }
+
+.chat-call-offer-user-actions .secondary{
+            background:#ff0043;
+        }
+
 .map-config{
     padding:10px 0;
 }
@@ -685,6 +805,7 @@ a{
         position:absolute;
         top:10px;
         right:10px;
+        z-index:10;
     }
 
 .gallery.fullscreen .image-wrapper{

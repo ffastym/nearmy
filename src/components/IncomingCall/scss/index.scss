@@ -1,0 +1,51 @@
+/**
+ * index component's styles
+ *
+ * @author Yuriy Matviyuk
+ */
+
+.chat-call-offer-user {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    background: $color-white;
+    box-shadow: $light-shadow;
+    border-radius: $border-radius-base;
+    padding: 15px;
+    transform: translate(-50%, -50%);
+
+    &-photo {
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: $light-shadow;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    &-name {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+
+    &-actions {
+        display: flex;
+        margin-top: 5px;
+
+        .button {
+            margin: 5px;
+            color: $color-white;
+        }
+
+        .primary {
+            background: $color-green-shine;
+        }
+
+        .secondary {
+            background: $color-red;
+        }
+    }
+}

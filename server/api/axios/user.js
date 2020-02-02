@@ -274,7 +274,7 @@ const userRequest = {
      */
     getUserProfile (req, res) {
       Models.User.findOne({ _id: req.body.userId }, (err, userDoc) => {
-        return res.json(err ? { success: false } : userDoc)
+        return res.json({ success: !err, user: userDoc })
       })
     }
   }

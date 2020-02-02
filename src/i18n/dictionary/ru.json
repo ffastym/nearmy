@@ -1,9 +1,11 @@
 {
   "translation": {
+		"Accept": "Принять",
 		"addToFavoritesError": "Во время добавления пользователя к списку избранных случилась ошибка. Пожалуйста, попробуйте позже",
 		"Age": "Возраст",
 		"ageRange": "Возрастной диапазон:",
 		"AgeWithVal": "Возраст: {{age}}",
+		"Cancel": "Отменить",
 		"determineYourLocation": "Определяем ваше местоположение...",
 		"distanceInKm": "{{distance}} км",
 		"DistanceWithVal": "Расстояние: {{distance}}",
@@ -11,6 +13,7 @@
 		"favoritesListEmpty": "Ваш список избранных пока пуст",
 		"Female": "Женский",
 		"female": "женский",
+		"interlocutorNotAnswer": "Пользователь не отвечает. Попробуйте перезвонить позже",
 		"Gender": "Пол",
 		"GenderWithVal": "Пол: {{gender}}",
 		"less1km": "< 1 км",
@@ -27,6 +30,8 @@
 		"photoRemovedSuccessfully": "Фото успешно удалено",
 		"photoRemovingError": "При удалении фото случилась ошибка. Попробуйте, пожалуйста, позже",
 		"profileWasUpdatedSuccessfully": "Ваш профиль успешно обновлен",
+		"proposeVideoChat": "Предлагает начать видеочат",
+		"Reject": "Отклонить",
 		"removeFromFavoritesError": "Во время удаления пользователя из списка избранных случилась ошибка. Пожалуйста, попробуйте позже",
 		"returnHome": "Вернутся на главную",
 		"Save": "Сохранить",
