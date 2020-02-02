@@ -19,11 +19,12 @@ import stream from '../../helper/stream'
  *
  * @param incomingCall
  * @param acceptVideoCall
+ * @param setMediaStream
  *
  * @returns {*}
  * @constructor
  */
-const IncomingCall = ({ incomingCall, acceptVideoCall }) => {
+const IncomingCall = ({ incomingCall, acceptVideoCall, setMediaStream }) => {
   let userData = incomingCall.senderData
   const { t } = useTranslation()
   let rington
@@ -32,10 +33,17 @@ const IncomingCall = ({ incomingCall, acceptVideoCall }) => {
 
   useEffect(() => {
     rington = new Audio('/audio/rington.mp3')
-    rington.play()
+
+    if (!incomingCall.senderData.isAnswer) {
+      rington.play()
+    }
 
     return () => rington.pause()
   }, [])
+
+  if (incomingCall && incomingCall.senderData && incomingCall.senderData.isAnswer) {
+    return ''
+  }
 
   const startVideoChat = async () => {
     try {
@@ -47,6 +55,14 @@ const IncomingCall = ({ incomingCall, acceptVideoCall }) => {
 
       setUser(data.user)
       acceptVideoCall()
+
+      try {
+        let videoStream = await stream.getMediaStream()
+        stream.addStream(videoStream)
+        setMediaStream(videoStream)
+      } catch (err) {
+        console.warn('Get media stream error ---> ', err)
+      }
       stream.createOffer(userData.id, true)
       
       if (url.chatView(userData.id) !== window.location.pathname) {
@@ -101,13 +117,15 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    acceptVideoCall: () => dispatch(chatActions.acceptVideoCall())
+    acceptVideoCall: () => dispatch(chatActions.acceptVideoCall()),
+    setMediaStream: stream => dispatch(chatActions.setMediaStream(stream))
   }
 }
 
 IncomingCall.propTypes = {
   incomingCall: PropTypes.object,
-  acceptVideoCall: PropTypes.func
+  acceptVideoCall: PropTypes.func,
+  setMediaStream: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(IncomingCall)

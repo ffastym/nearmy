@@ -150,11 +150,12 @@ if (typeof window !== 'undefined') {
       senderData: pc.senderData
     }
 
+    store.dispatch(chatActions.setIncomingCallData(data))
+
     if (pc.senderData.isAnswer) {
-      return // do nothing if user create offer when accept other offer
+      return // do nothing if it is an answer
     }
 
-    store.dispatch(chatActions.setIncomingCallData(data))
     setTimeout(() => {
       if (store.getState().chat.incomingCall && !store.getState().chat.incomingCall.accepted) {
         stream.declineVideoChat()
