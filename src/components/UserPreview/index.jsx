@@ -47,10 +47,22 @@ const UserPreview = ({ user, currentUserId, favorites, setNotify, updateFavorite
     return t(distance === 1 ? 'less1km' : 'distanceInKm', { distance })
   }
 
-  const setRedirectToProfile = () => {
+  /**
+   * Redirect to chat page
+   *
+   * @param e
+   */
+  const setRedirectToChat = (e) => {
+    e.preventDefault()
     redirectToChat(true)
   }
 
+  /**
+   * Add/remove user to/from favorites
+   *
+   * @param e
+   * @returns {Promise<void>}
+   */
   const toggleFavorites = async (e) => {
     e.preventDefault()
     const { data } = await userRequest.toggleFavorites(currentUserId, profileUserId, remove)
@@ -81,7 +93,7 @@ const UserPreview = ({ user, currentUserId, favorites, setNotify, updateFavorite
       </div>
       <div className="user-actions actions">
         <button className={`action like bold ${remove ? '_remove' : '_add'}`} onClick={toggleFavorites}/>
-        <button type='button' className="action bold chat" onClick={setRedirectToProfile}/>
+        <button type='button' className="action bold chat" onClick={setRedirectToChat}/>
       </div>
     </NavLink>
   )
