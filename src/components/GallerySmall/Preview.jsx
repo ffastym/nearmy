@@ -111,7 +111,7 @@ const Preview = ({
             <Image cloudName={cloudinary.cloudName}
               publicId={photo}
               onClick={() => setFullscreenPhoto(photo)}>
-              <Transformation height="60" fetchFormat="auto" width="60" gravity='face' crop="fill" />
+              <Transformation height="100" fetchFormat="auto" width="100" gravity='face' crop="fill" />
             </Image>
           </Fragment>}
       </div>

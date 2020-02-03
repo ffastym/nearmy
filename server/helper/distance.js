@@ -14,12 +14,12 @@ export default {
   setDistanceToUserModel (User, coordinates) {
     let distance = getDistance(
       {
-        longitude: User._doc.coordinates.lng,
-        latitude: User._doc.coordinates.lat
+        longitude: User._doc.coordinates[0],
+        latitude: User._doc.coordinates[1]
       },
       {
-        longitude: coordinates.lng,
-        latitude: coordinates.lat
+        longitude: coordinates[0],
+        latitude: coordinates[1]
       }
     )
 

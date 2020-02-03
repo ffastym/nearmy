@@ -54,11 +54,11 @@ const Photo = ({ avatar, isEditable, setNotify, setAvatar, userId }) => {
 
   return (
     <div className="profile-photo-wrapper">
+      {isEditable &&
+        <label className='action edit' htmlFor='profile_photo'>
+          <input id='profile_photo' type='file' className='hidden' accept='image/*' onChange={changePhoto}/>
+        </label>}
       <div className="profile-photo">
-        {isEditable &&
-          <label className='action edit' htmlFor='profile_photo'>
-            <input id='profile_photo' type='file' className='hidden' accept='image/*' onChange={changePhoto}/>
-          </label>}
         {isUploadProcessed
           ? <Loader/>
           : <Image cloudName={cloudinary.cloudName} publicId={avatar}>

@@ -33,10 +33,7 @@ class Search extends Component {
   componentDidMount () {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
-        const coordinates = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        }
+        const coordinates = [position.coords.longitude, position.coords.latitude]
 
         this.props.setCoordinates(coordinates)
         this.getNearbyUsers(coordinates)
@@ -155,7 +152,7 @@ Search.propTypes = {
   setNotify: PropTypes.func,
   setNearbyUsers: PropTypes.func,
   setCoordinates: PropTypes.func,
-  coordinates: PropTypes.object,
+  coordinates: PropTypes.array,
   searchRadius: PropTypes.number,
   userId: PropTypes.string,
   gender: PropTypes.string,

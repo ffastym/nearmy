@@ -77,7 +77,8 @@ if (typeof window !== 'undefined') {
 
     getMediaStream () {
       return navigator.mediaDevices.getUserMedia({
-        video: true
+        video: true,
+        audio: true
       })
     },
 

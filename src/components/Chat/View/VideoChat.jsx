@@ -67,7 +67,7 @@ const VideoChat = ({
             </Button>
           </div>
         </div>}
-      {!isSingleVideo && <video className='video-own' autoPlay ref={videoOwnRef}/>}
+      {!isSingleVideo && <video className='video-own' muted autoPlay ref={videoOwnRef}/>}
     </div>
   )
 }

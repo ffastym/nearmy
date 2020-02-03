@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import url from '../../router/url'
 import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import {NavLink, withRouter} from 'react-router-dom'
 
 /**
  * ActionsPanel component
@@ -26,15 +26,15 @@ const ActionsPanel = ({ notificationsQty, userId, isCustomLayout, newChats, user
 
   return (
     <div className="actions-panel bottom">
-      <NavLink exact to={url.home} className="action home"/>
-      <NavLink to={url.notifications} className="action notifications">
+      <NavLink exact to={url.home} activeClassName='active' className="action home"/>
+      <NavLink to={url.notifications} activeClassName='active' className="action notifications">
         {!!notificationsQty && <span className='qty'>{notificationsQty}</span>}
       </NavLink>
-      <NavLink to={url.chat} className="action chat">
+      <NavLink to={url.chat} activeClassName='active' className="action chat">
         {!!newChats.size && <span className="counter">{newChats.size}</span>}
       </NavLink>
-      <NavLink to={url.favorites} className="action like"/>
-      <NavLink to={url.profile(userId)} className="action profile"/>
+      <NavLink to={url.favorites} activeClassName='active' className="action like"/>
+      <NavLink to={url.profile(userId)} activeClassName='active' className="action profile"/>
     </div>
   )
 }
@@ -61,4 +61,4 @@ ActionsPanel.propTypes = {
   newChats: PropTypes.object
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ActionsPanel)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ActionsPanel))

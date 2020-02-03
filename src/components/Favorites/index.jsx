@@ -77,7 +77,7 @@ const mapDispatchToProps = dispatch => {
 
 Favorites.propTypes = {
   favorites: PropTypes.array,
-  coordinates: PropTypes.object,
+  coordinates: PropTypes.array,
   setNotify: PropTypes.func
 }
 

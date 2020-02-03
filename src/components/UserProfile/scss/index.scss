@@ -7,19 +7,32 @@
 .profile-photo-wrapper {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    width: max-content;
 
     .profile-photo {
         box-shadow: $light-shadow;
-        position: relative;
         overflow: hidden;
         border-radius: $border-radius-base;
         height: 200px;
         width: 150px;
+    }
 
-        .edit {
-            position: absolute;
-            right: 0;
-            top: 0;
+    .edit {
+        box-shadow: $light-shadow;
+        position: absolute;
+        background: rgba(255,255,255,.8);
+        border-radius: 50%;
+        right: -7px;
+        top: -7px;
+        height: 25px;
+        width: 25px;
+
+        &:before {
+            height: 25px;
+            width: 25px;
+            font-size: 14px;
         }
     }
 }

@@ -11,8 +11,8 @@
     justify-content: center;
 
     .photo-preview {
-        height: 60px;
-        width: 60px;
+        height: 100px;
+        width: 100px;
         margin: 5px;
         border-radius: 50%;
         overflow: hidden;
@@ -24,10 +24,12 @@
     }
 
     .add-photo {
-        height: 60px;
-        width: 60px;
+        height: 100px;
+        width: 100px;
         position: relative;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:not(.processed):before {
             position: absolute;
