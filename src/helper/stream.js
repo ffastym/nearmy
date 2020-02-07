@@ -54,13 +54,14 @@ if (typeof window !== 'undefined') {
       try {
         await pc.setLocalDescription(new RTCSessionDescription(offer))
       } catch (e) {
-        console.log('test ---> ', e)
+        console.log('Set local description error ---> ', e)
       }
 
       socket.app.emit('makeVideoOffer', { offer, userId, senderData })
     },
 
     stopStream () {
+      console.log('test ---> ', 'text')
       store.dispatch(chatActions.setMediaStream(null))
       store.dispatch(appActions.setNotify('interlocutorNotAnswer', 'warning'))
     },
@@ -122,6 +123,11 @@ if (typeof window !== 'undefined') {
       store.dispatch(chatActions.setIncomingCallData(null))
     },
 
+    /**
+     * Cancel video chat
+     *
+     * @param receiverId
+     */
     cancelVideoChat (receiverId) {
       store.getState().chat.mediaStream.getTracks().forEach(track => track.stop())
       store.dispatch(chatActions.setMediaStream(null))

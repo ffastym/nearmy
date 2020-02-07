@@ -41,6 +41,20 @@ const VideoChat = ({
     if (videoInterRef.current && incomingCall) {
       videoInterRef.current.srcObject = incomingCall.stream
     }
+
+    if (mediaStream && incomingCall) {
+      window.onbeforeunload = e => {
+        const dialogText = t('isWantReload')
+        e.returnValue = dialogText
+        return dialogText
+      }
+      window.onunload = () => {
+        stream.cancelVideoChat(interlocutor._id)
+      }
+    } else {
+      window.onbeforeunload = null
+      window.onunload = null
+    }
   })
 
   const cancelVideoChat = () => {

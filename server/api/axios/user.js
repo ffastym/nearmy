@@ -90,9 +90,15 @@ const userRequest = {
      * @returns {Promise<*>}
      */
     async getFavoritesList (req, res) {
-      const users = await Models.User
-        .find({ _id: { $in: req.body.favoritesIds } })
-        .select(['+coordinates'])
+      let users
+
+      try {
+        users = await Models.User
+          .find({ _id: { $in: req.body.favoritesIds } })
+          .select(['+coordinates'])
+      } catch (e) {
+        throw new Error(e)
+      }
 
       if (!users) {
         return res.json({ success: false })

@@ -140,7 +140,11 @@ const io = {
      * @param socket
      */
     makeVideoOffer ({ offer, userId, senderData }, socket) {
-      socket.to(this.users[userId]).emit('madeVideoOffer', { offer, senderData })
+      const receiverSocketId = this.users[userId]
+
+      if (receiverSocketId) {
+        socket.to(receiverSocketId).emit('madeVideoOffer', { offer, senderData })
+      }
     },
 
     /**

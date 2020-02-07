@@ -11,6 +11,7 @@
 		"DistanceWithVal": "Расстояние: {{distance}}",
 		"favoritesList": "Избранные",
 		"favoritesListEmpty": "Ваш список избранных пока пуст",
+		"favoritesListLoading": "Список загружается",
 		"Female": "Женский",
 		"female": "женский",
 		"interlocutorNotAnswer": "Пользователь не отвечает. Попробуйте перезвонить позже",

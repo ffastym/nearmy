@@ -11,6 +11,7 @@
 		"DistanceWithVal": "Distance: {{distance}}",
 		"favoritesList": "Favorites",
 		"favoritesListEmpty": "Your favorites list is empty yet",
+		"favoritesListLoading": "Favorites list is loading",
 		"Female": "Female",
 		"female": "female",
 		"interlocutorNotAnswer": "User not answer. Try again later",

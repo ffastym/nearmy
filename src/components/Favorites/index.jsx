@@ -23,21 +23,24 @@ import { useTranslation } from 'react-i18next'
 const Favorites = ({ setNotify, favorites, coordinates }) => {
   const { t } = useTranslation()
   const [favoritesList, setFavoritesList] = useState([])
-  const [isLoadingPrecessed, SetIsLoadingProcessed] = useState(true)
+  const [isLoadingPrecessed, setIsLoadingProcessed] = useState(true)
 
   const getFavoritesHtml = () => {
     return favoritesList.map(favorite => <Preview key={favorite._id} user={favorite}/>)
   }
 
   async function getFavoritesList () {
-    const { data } = await userRequest.getFavoritesList(favorites, coordinates)
-    SetIsLoadingProcessed(false)
+    try {
+      const { data } = await userRequest.getFavoritesList(favorites, coordinates)
 
-    if (!data.success) {
-      return setNotify('fetchFavoritesListError', 'error')
+      if (data.success) {
+        setFavoritesList(data.favorites)
+      }
+    } catch (e) {
+      setNotify('fetchFavoritesListError', 'error')
     }
 
-    setFavoritesList(data.favorites)
+    setIsLoadingProcessed(false)
   }
 
   useEffect(() => {

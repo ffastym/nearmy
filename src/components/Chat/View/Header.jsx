@@ -18,11 +18,18 @@ import { NavLink, withRouter } from 'react-router-dom'
  * @param history
  * @param setHeaderHeight
  * @param setMediaStream
+ * @param mediaStream
  *
  * @returns {*}
  * @constructor
  */
-const Header = ({ user, history, setHeaderHeight, setMediaStream }) => {
+const Header = ({
+  user,
+  history,
+  setHeaderHeight,
+  setMediaStream,
+  mediaStream
+}) => {
   const chatViewHeaderRef = useRef(null)
 
   useEffect(() => {
@@ -36,11 +43,15 @@ const Header = ({ user, history, setHeaderHeight, setMediaStream }) => {
       let videoStream = await stream.getMediaStream()
       setMediaStream(videoStream)
       stream.addStream(videoStream)
-    } catch (err) {
-      console.warn('Get media stream error ---> ', err)
+    } catch (e) {
+      throw new Error(e)
     }
 
     stream.createOffer(user._id)
+  }
+
+  const stopVideo = () => {
+    stream.cancelVideoChat(user._id)
   }
 
   return (
@@ -63,14 +74,18 @@ const Header = ({ user, history, setHeaderHeight, setMediaStream }) => {
         {user.isOnline && <span className='action online-status online'/>}
       </div>
       <div className="chat-view-video">
-        <button className="action video" onClick={createVideoOffer}/>
+        <button className={`action video ${mediaStream ? 'active' : ''}`}
+          onClick={mediaStream ? stopVideo : createVideoOffer}/>
       </div>
     </div>
   )
 }
 
 const mapStateToProps = state => {
-  return {}
+  return {
+    incomingCall: state.chat.incomingCall,
+    mediaStream: state.chat.mediaStream
+  }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -83,6 +98,8 @@ Header.propTypes = {
   user: PropTypes.object.isRequired,
   setHeaderHeight: PropTypes.func,
   setMediaStream: PropTypes.func,
+  incomingCall: PropTypes.object,
+  mediaStream: PropTypes.object,
   history: PropTypes.object.isRequired
 }
 

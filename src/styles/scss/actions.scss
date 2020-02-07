@@ -36,8 +36,17 @@
         color: $color-online;
     }
 
-    &.video:before {
-        content: $fa-video;
+    &.video {
+        &:before {
+            content: $fa-video;
+        }
+
+        &.active {
+            &:before {
+                font-weight: bold;
+                color: $color-red;
+            }
+        }
     }
 
     &.like {

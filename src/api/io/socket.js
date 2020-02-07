@@ -24,7 +24,7 @@ const socket = {
    */
   io (userId = null) {
     if (!this.app) {
-      this.app = io(`${process.env.NODE_ENV === 'development' ? 'localhost:3001' : '/'}?id=${userId}`)
+      this.app = io(`${process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : '/'}?id=${userId}`)
     }
 
     Object.keys(events).forEach(eventName => {

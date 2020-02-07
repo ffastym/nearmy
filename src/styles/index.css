@@ -1154,8 +1154,13 @@ h1{
     }
 
 .action.video:before{
-        content:'\f03d';
-    }
+            content:'\f03d';
+        }
+
+.action.video.active:before{
+                font-weight:bold;
+                color:#ff0043;
+            }
 
 .action.like:before{
             content:'\f004';
