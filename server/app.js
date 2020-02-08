@@ -6,6 +6,7 @@ import connectToDb from './db/connectToDb'
 import cors from 'cors'
 import enforce from 'express-sslify'
 import express from 'express'
+import { pathToRegexp } from 'path-to-regexp'
 import io from './api/io'
 import listenAxiosRequests from './api/axios/router'
 import path from 'path'
@@ -19,7 +20,12 @@ const router = express.Router()
 connectToDb()
 
 Object.values(url).forEach(path => {
-  router.get(path, renderer)
+  router.get(
+    typeof path === 'function'
+      ? pathToRegexp(path(':userId'))
+      : path
+    , renderer
+  )
 })
 
 app.use(cors())

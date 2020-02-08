@@ -10,16 +10,11 @@ import React from 'react'
  */
 
 const Head = () => {
-  let title = 'PhotoBattle | Фотобатл - битва селфі'
-  let description = 'Поборися за право називати себе королем/королевою селфі. Викликай противників на батл ' +
-    'та займи перші сходинки в рейтингу'
-  let keywords = 'фотобатл, селфі, шукаю тебе, тз, шт, зізнання, типове зізнання, підслухано, батлб король селфі'
-
   return (
     <React.Fragment>
-      <title>{title}</title>
-      <meta name='description' content={description}/>
-      <meta name='keywords' content={keywords}/>
+      <title>Next To Me</title>
+      <meta name='description' content="Знайомства поблизу. Додаток покаже список осіб протилежної статі поблизу. Знайомтесь, спілкуйтесь у чаті або по відео."/>
+      <meta name='keywords' content="nextome, nex2me, next to me, шукаю тебе, тз, шт, зізнання, типове зізнання, знайомства, знакомства, dating, badoo, tinder, nekto, підслухано, invischat"/>
     </React.Fragment>
   )
 }
