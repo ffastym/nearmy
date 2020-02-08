@@ -5,6 +5,7 @@
 		"Age": "Age",
 		"ageRange": "Age range:",
 		"AgeWithVal": "Age: {{age}}",
+		"callTo": "Call to {{name}}",
 		"Cancel": "Cancel",
 		"determineYourLocation": "Determine your location...",
 		"distanceInKm": "{{distance}} km",
@@ -40,6 +41,7 @@
 		"searchingNearbyUsers": "Searching nearby users...",
 		"searchRadius": "Search radius: {{val}} km",
 		"setYourInfo": "Please, at first, set information about yourself",
+		"userEndCall": "Interlocutor end call",
 		"yourCurrentLocation": "Your location: ",
 		"yourMessage": "Your message"
   }

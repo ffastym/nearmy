@@ -36,7 +36,7 @@ const chatReducer = (state = initialState, action) => {
     case 'SET_MEDIA_STREAM':
       const stream = action.stream
 
-      if (!stream) {
+      if (!stream && state.mediaStream) {
         state.mediaStream.getTracks().forEach(track => track.stop())
       }
 

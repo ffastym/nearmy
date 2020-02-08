@@ -154,7 +154,7 @@ const io = {
      * @param socket
      */
     declineVideoChat ({ senderId }, socket) {
-      socket.to(this.users[senderId]).emit('stopStream')
+      socket.to(this.users[senderId]).emit('stopStream', { message: 'interlocutorNotAnswer' })
     },
 
     /**
@@ -176,6 +176,16 @@ const io = {
      */
     addCandidate ({ candidate, userId }, socket) {
       socket.to(this.users[userId]).emit('addCandidate', candidate)
+    },
+
+    /**
+     * Stop video call
+     *
+     * @param senderId
+     * @param socket
+     */
+    stopVideoCall ({ senderId }, socket) {
+      socket.to(this.users[senderId]).emit('stopStream', { message: 'userEndCall' })
     },
 
     /**

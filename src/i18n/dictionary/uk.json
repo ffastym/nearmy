@@ -5,6 +5,7 @@
 		"Age": "Вік",
 		"ageRange": "Віковий діапазон:",
 		"AgeWithVal": "Вік: {{age}}",
+		"callTo": "Телефонуємо до {{name}}",
 		"Cancel": "Скасувати",
 		"determineYourLocation": "Визначаємо ваше розташування...",
 		"distanceInKm": "{{distance}} км",
@@ -40,6 +41,7 @@
 		"searchingNearbyUsers": "Шукаємо користувачів поряд...",
 		"searchRadius": "Радіус пошуку: {{val}} км",
 		"setYourInfo": "Будь ласка, спершу заповніть свій профіль",
+		"userEndCall": "Співрозмовник завершив виклик",
 		"yourCurrentLocation": "Ваше розташування: ",
 		"yourMessage": "Ваше повідомлення"
 	}

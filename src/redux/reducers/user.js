@@ -18,7 +18,7 @@ const initialState = {
   nearbyUsers: null,
   notifications: [],
   searchRadius: searchRadius // in kilometers
-    ? parseInt(searchRadius) <= 100
+    ? parseInt(searchRadius) <= 200
       ? parseInt(searchRadius)
       : 100
     : 20

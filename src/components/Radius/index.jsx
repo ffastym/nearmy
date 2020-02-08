@@ -66,7 +66,7 @@ const Radius = ({ searchRadius, setSearchRadius, getNearbyUsers }) => {
         onChange={changeRadius}
         step={5}
         min={5}
-        max={100}
+        max={200}
       />}
     </Fragment>
   )

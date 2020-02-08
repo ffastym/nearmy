@@ -48,12 +48,8 @@ const VideoChat = ({
         e.returnValue = dialogText
         return dialogText
       }
-      window.onunload = () => {
-        stream.cancelVideoChat(interlocutor._id)
-      }
-    } else {
+    } else if (window.onbeforeunload) {
       window.onbeforeunload = null
-      window.onunload = null
     }
   })
 
@@ -72,6 +68,7 @@ const VideoChat = ({
               <Transformation height="150" fetchFormat="auto" width="150" gravity='face' crop="fill" />
             </Image>
           </div>
+          <div>{t('callTo', { name: interlocutor.name })}</div>
           <div className="video-chat-request-actions">
             <Button href=''
               onClick={cancelVideoChat}

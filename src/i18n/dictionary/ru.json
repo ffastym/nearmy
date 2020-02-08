@@ -5,6 +5,7 @@
 		"Age": "Возраст",
 		"ageRange": "Возрастной диапазон:",
 		"AgeWithVal": "Возраст: {{age}}",
+		"callTo": "Звоним {{name}}",
 		"Cancel": "Отменить",
 		"determineYourLocation": "Определяем ваше местоположение...",
 		"distanceInKm": "{{distance}} км",
@@ -39,6 +40,7 @@
 		"searchingNearbyUsers": "Ищем пользователей рядом...",
 		"searchRadius": "Радиус поиска: {{val}} км",
 		"setYourInfo": "Пожалуйста, сперва заполните свой профиль",
+		"userEndCall": "Собеседник закончил вызов",
 		"yourCurrentLocation": "Ваше местоположение: ",
 		"yourMessage": "Ваше сообщение"
   }

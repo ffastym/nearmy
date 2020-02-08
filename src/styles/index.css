@@ -434,42 +434,46 @@ a{
         margin:0 auto;
     }
 
-.chat-view.video:not(.single) .video-chat{
-            height:calc(100vh - 90px);
+.chat-view.video .video-chat-request-actions{
+            margin-top:10px;
         }
+
+.chat-view.video:not(.single) .video-chat{
+                height:calc(100vh - 90px);
+            }
 
 .chat-view.video:not(.single) .video-chat video{
-                height:50%;
-            }
+                    height:50%;
+                }
 
 .chat-view.video:not(.single) .toggle-mode:before{
-            content:'\f4b6';
-        }
-
-.chat-view.video:not(.single) .chat-messages-wrapper{
-            display:none;
-        }
-
-.chat-view.single .video-chat{
-            height:calc((100vh - 90px) / 2) !important;
-        }
-
-.chat-view.single .video-chat-request{
-            height:100%;
-        }
-
-.chat-view.single .toggle-mode{
-            top:calc(100% + 10px)
-        }
-
-.chat-view.single .toggle-mode:before{
-                content:'\f03d';
+                content:'\f4b6';
             }
 
-.chat-view.single .chat-messages-wrapper{
-            height:calc((100vh - 90px) / 2) !important;
-            border-top:1px solid #efefef;
-        }
+.chat-view.video:not(.single) .chat-messages-wrapper{
+                display:none;
+            }
+
+.chat-view.video.single .video-chat{
+                height:calc((100vh - 90px) / 2) !important;
+            }
+
+.chat-view.video.single .video-chat-request{
+                height:100%;
+            }
+
+.chat-view.video.single .toggle-mode{
+                top:calc(100% + 10px)
+            }
+
+.chat-view.video.single .toggle-mode:before{
+                    content:'\f03d';
+                }
+
+.chat-view.video.single .chat-messages-wrapper{
+                height:calc((100vh - 90px) / 2) !important;
+                border-top:1px solid #efefef;
+            }
 
 .video-chat-request{
     text-align:center;
@@ -481,7 +485,7 @@ a{
 }
 
 .video-chat-request-photo{
-        margin:20px auto;
+        margin:10px auto;
         border-radius:50%;
         box-shadow:0 0 5px -2px rgba(0,0,0,.7);
         overflow:hidden;

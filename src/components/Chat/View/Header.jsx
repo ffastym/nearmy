@@ -19,6 +19,7 @@ import { NavLink, withRouter } from 'react-router-dom'
  * @param setHeaderHeight
  * @param setMediaStream
  * @param mediaStream
+ * @param cancelIncomingCall
  *
  * @returns {*}
  * @constructor
@@ -28,7 +29,8 @@ const Header = ({
   history,
   setHeaderHeight,
   setMediaStream,
-  mediaStream
+  mediaStream,
+  cancelIncomingCall
 }) => {
   const chatViewHeaderRef = useRef(null)
 
@@ -51,7 +53,8 @@ const Header = ({
   }
 
   const stopVideo = () => {
-    stream.cancelVideoChat(user._id)
+    stream.stopAllStreams(user._id)
+    cancelIncomingCall()
   }
 
   return (
@@ -90,7 +93,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setMediaStream: stream => dispatch(chatActions.setMediaStream(stream))
+    setMediaStream: stream => dispatch(chatActions.setMediaStream(stream)),
+    cancelIncomingCall: () => dispatch(chatActions.setIncomingCallData(null))
   }
 }
 
@@ -98,6 +102,7 @@ Header.propTypes = {
   user: PropTypes.object.isRequired,
   setHeaderHeight: PropTypes.func,
   setMediaStream: PropTypes.func,
+  cancelIncomingCall: PropTypes.func,
   incomingCall: PropTypes.object,
   mediaStream: PropTypes.object,
   history: PropTypes.object.isRequired

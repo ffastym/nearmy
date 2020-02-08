@@ -60,10 +60,10 @@ if (typeof window !== 'undefined') {
       socket.app.emit('makeVideoOffer', { offer, userId, senderData })
     },
 
-    stopStream () {
-      console.log('test ---> ', 'text')
-      store.dispatch(chatActions.setMediaStream(null))
-      store.dispatch(appActions.setNotify('interlocutorNotAnswer', 'warning'))
+    stopAllStreams (senderId) {
+      this.stopStream()
+      this.cancelVideoChat(senderId)
+      socket.app.emit('stopVideoCall', { senderId })
     },
 
     addCandidate (candidate) {
@@ -91,13 +91,13 @@ if (typeof window !== 'undefined') {
       try {
         await pc.setRemoteDescription(new RTCSessionDescription(data.offer))
       } catch (e) {
-        console.warn('Error', e)
+        console.error(new Error(e))
       }
 
       try {
         answer = await pc.createAnswer()
       } catch (e) {
-        console.warn('Error', e)
+        console.error(new Error(e))
       }
 
       try {
@@ -124,13 +124,24 @@ if (typeof window !== 'undefined') {
     },
 
     /**
+     * Stop video streaming
+     */
+    stopStream () {
+      const stream = store.getState().chat.mediaStream
+
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop())
+        store.dispatch(chatActions.setMediaStream(null))
+      }
+    },
+
+    /**
      * Cancel video chat
      *
      * @param receiverId
      */
     cancelVideoChat (receiverId) {
-      store.getState().chat.mediaStream.getTracks().forEach(track => track.stop())
-      store.dispatch(chatActions.setMediaStream(null))
+      this.stopStream()
       socket.app.emit('cancelVideoChat', { receiverId })
     },
 

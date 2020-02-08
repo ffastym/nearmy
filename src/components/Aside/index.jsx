@@ -22,7 +22,7 @@ const Aside = ({ isAcceptCookies, incomingCall }) => {
     <aside>
       <Notify/>
       {isAcceptCookies && <CookiesBanner/>}
-      {incomingCall && !incomingCall.accepted && <IncomingCall incomingCall={incomingCall}/>}
+      {incomingCall && <IncomingCall incomingCall={incomingCall}/>}
     </aside>
   )
 }

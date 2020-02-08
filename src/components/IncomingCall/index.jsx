@@ -27,19 +27,8 @@ import stream from '../../helper/stream'
 const IncomingCall = ({ incomingCall, acceptVideoCall, setMediaStream }) => {
   let userData = incomingCall.senderData
   const { t } = useTranslation()
-  let rington
   const [isNeedRedirect, setRedirect] = useState(false)
   const [user, setUser] = useState(null)
-
-  useEffect(() => {
-    rington = new Audio('/audio/rington.mp3')
-
-    if (!incomingCall.senderData.isAnswer) {
-      rington.play()
-    }
-
-    return () => rington.pause()
-  }, [])
 
   if (incomingCall && incomingCall.senderData && incomingCall.senderData.isAnswer) {
     return ''
@@ -61,16 +50,16 @@ const IncomingCall = ({ incomingCall, acceptVideoCall, setMediaStream }) => {
         stream.addStream(videoStream)
         setMediaStream(videoStream)
       } catch (err) {
-        console.warn('Get media stream error ---> ', err)
+        console.error(new Error(`Get media stream error --->  ${err}`))
       }
+
       stream.createOffer(userData.id, true)
-      
+
       if (url.chatView(userData.id) !== window.location.pathname) {
         setRedirect(true)
       }
-      rington.pause()
     } catch (e) {
-      console.log('Error ---> ', e)
+      console.error(new Error(e))
     }
   }
 
@@ -82,6 +71,7 @@ const IncomingCall = ({ incomingCall, acceptVideoCall, setMediaStream }) => {
 
   return (
     <div className='chat-call-offer overlay'>
+      <audio src='/audio/rington.mp3' autoPlay/>
       <div className="chat-call-offer-user">
         <div className="chat-call-offer-user-photo">
           <Image cloudName={cloudinary.cloudName} publicId={userData.avatar}>

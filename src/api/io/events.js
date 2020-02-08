@@ -7,6 +7,7 @@ import chatActions from '../../redux/actions/chat'
 import store from '../../redux/store'
 import stream from '../../helper/stream'
 import userActions from '../../redux/actions/user'
+import appActions from '../../redux/actions/app'
 
 const events = {
   /**
@@ -52,8 +53,9 @@ const events = {
   /**
    * Stop video streaming
    */
-  stopStream () {
+  stopStream ({ message }) {
     stream.stopStream()
+    store.dispatch(appActions.setNotify(message, 'warning'))
   },
 
   /**
