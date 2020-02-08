@@ -10,6 +10,7 @@ import { connect } from 'react-redux'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import LogIn from '../LogIn'
 import UserProfile from '../UserProfile'
+import PrivacyPolicy from '../PrivacyPolicy'
 import Chat from '../Chat'
 import ChatView from '../Chat/View'
 import Notifications from '../Notifications'
@@ -19,18 +20,18 @@ import Favorites from '../Favorites'
  * Main component
  *
  * @param isLoggedIn
- * @param userId
  *
  * @returns {*}
  * @constructor
  */
-const Main = ({ isLoggedIn, userId }) => {
+const Main = ({ isLoggedIn }) => {
   return (
     <main className='main'>
       {isLoggedIn
         ? <Switch>
           <Route exact path={url.home} render={() => (<Home/>)}/>
           <Route exact path={url.chat} render={() => (<Chat/>)}/>
+          <Route exact path={url.privacyPolicy} render={() => (<PrivacyPolicy/>)}/>
           <Route exact path={url.favorites} render={() => (<Favorites/>)}/>
           <Route exact path={url.notifications} render={() => (<Notifications/>)}/>
           <Route exact path={url.chatView(':userId')} render={() => (<ChatView/>)}/>
@@ -44,8 +45,7 @@ const Main = ({ isLoggedIn, userId }) => {
 
 const mapStateToProps = state => {
   return {
-    isLoggedIn: !!state.user.id,
-    userId: state.user.id
+    isLoggedIn: !!state.user.id
   }
 }
 
@@ -54,8 +54,7 @@ const mapDispatchToProps = dispatch => {
 }
 
 Main.propTypes = {
-  isLoggedIn: PropTypes.bool,
-  userId: PropTypes.string
+  isLoggedIn: PropTypes.bool
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main))

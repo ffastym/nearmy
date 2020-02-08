@@ -6,6 +6,9 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import appActions from '../../redux/actions/app'
+import url from '../../router/url'
+import {useTranslation} from 'react-i18next'
+import Button from '@material-ui/core/Button'
 
 /**
  * CookiesBanner component
@@ -16,15 +19,28 @@ import appActions from '../../redux/actions/app'
  * @constructor
  */
 const CookiesBanner = ({ acceptCookies }) => {
+  const { t } = useTranslation()
+
   return (
     <div className='cookies-banner'>
-      <p>
-        Для ведення аналітики відвідування додатку ми використовуємо
-        файли cookies, а також записуємо дані про сесію до локального сховища Вашого браузера.
-        Натискаючи на кнопку нижче ви підтверджуєте, що погоджуєтеся з даними умовами та з
-        умовами нашої <a href="http://www.invischat.com/privacy_policy">Політики конфіденційності</a>
-      </p>
-      <button className="button ok-button" onClick={acceptCookies}>Погоджуюся</button>
+      <p className='cookies-banner__message'
+        dangerouslySetInnerHTML={
+          { __html: t(
+            'cookiesMessage',
+            {
+              privacyPolicyUrl: url.privacyPolicy,
+              interpolation: {
+                escapeValue: false
+              }
+            }
+          ) }
+        }/>
+      <Button href=''
+        onClick={acceptCookies}
+        className="button primary"
+        variant={'contained'}>
+        {t('Accept')}
+      </Button>
     </div>
   )
 }

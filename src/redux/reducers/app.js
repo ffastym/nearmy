@@ -1,8 +1,10 @@
 /**
  * @author Yuriy Matviyuk
  */
+import storage from '../../helper/storage'
+
 const initialState = {
-  isAcceptCookies: false,
+  isAcceptCookies: !!storage.getLocalStorage().getItem('acceptCookies'),
   isCustomLayout: false,
   notify: {
     message: '',

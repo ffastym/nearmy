@@ -28,7 +28,7 @@ const Radius = ({ searchRadius, setSearchRadius, getNearbyUsers }) => {
     if (!prevRadius) {
       setPrevRadius(searchRadius)
     }
-  })
+  }, [searchRadius, prevRadius])
 
   const edit = () => {
     if (isEditMode) {

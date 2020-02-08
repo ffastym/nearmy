@@ -610,6 +610,28 @@ a{
     flex-direction:column;
 }
 
+.cookies-banner{
+    position:fixed;
+    text-align:center;
+    bottom:0;
+    background:#FFFFFF;
+    padding:5px;
+    box-shadow:0 0 5px -2px rgba(0,0,0,.7);
+    z-index:100;
+}
+
+.cookies-banner__link{
+        text-decoration:underline
+    }
+
+.cookies-banner__link:hover{
+            text-decoration:none;
+        }
+
+.cookies-banner__message{
+        margin-bottom:10px;
+    }
+
 .loader{
     margin:15px auto;
     position:relative;

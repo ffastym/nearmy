@@ -4,7 +4,6 @@
 import socket from '../api/io/socket'
 import store from '../redux/store'
 import chatActions from '../redux/actions/chat'
-import appActions from '../redux/actions/app'
 
 const CALL_OFFER_LIFE_TIME = 30000 // automatically cancel video chat offer after this time (in milliseconds)
 let stream = {}

@@ -21,7 +21,7 @@ const Aside = ({ isAcceptCookies, incomingCall }) => {
   return (
     <aside>
       <Notify/>
-      {isAcceptCookies && <CookiesBanner/>}
+      {!isAcceptCookies && <CookiesBanner/>}
       {incomingCall && <IncomingCall incomingCall={incomingCall}/>}
     </aside>
   )
@@ -29,7 +29,8 @@ const Aside = ({ isAcceptCookies, incomingCall }) => {
 
 const mapStateToProps = state => {
   return {
-    incomingCall: state.chat.incomingCall
+    incomingCall: state.chat.incomingCall,
+    isAcceptCookies: state.app.isAcceptCookies
   }
 }
 
