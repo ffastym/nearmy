@@ -12,7 +12,9 @@ import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import VideoChat from './VideoChat'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
+import userRequest from '../../../api/axios/request/user'
+import url from '../../../router/url'
 
 /**
  * ChatView component
@@ -23,6 +25,7 @@ import { withRouter } from 'react-router-dom'
  * @param messages
  * @param setMessages
  * @param changeLayout
+ * @param setNotify
  * @param isCustomLayout
  * @param incomingCall
  * @param mediaStream
@@ -37,12 +40,13 @@ const ChatView = ({
   messages,
   setMessages,
   changeLayout,
+  setNotify,
   isCustomLayout,
   incomingCall,
   mediaStream
 }) => {
-  const interlocutor = location.state.user
-  const chatId = interlocutor._id
+  const chatId = match.params.userId
+  const [interlocutor, setInterlocutor] = useState(location.state && location.state.user)
   const chatMessages = messages[chatId]
   const [headerHeight, setHeaderHeight] = useState(0)
   const [actionsHeight, setActionsHeight] = useState(0)
@@ -50,15 +54,22 @@ const ChatView = ({
   const messagesHeight = `calc(100vh - ${headerHeight}px - ${actionsHeight}px)`
   const videoCallActive = (mediaStream || (incomingCall && incomingCall.accepted))
 
-  const toggleVideoMode = () => {
-    setIsSingleVideo(!isSingleVideo)
-  }
-
-  if (!isCustomLayout) {
-    changeLayout(true)
-  }
-
   useEffect(() => {
+    if (!interlocutor) {
+      (async () => {
+        try {
+          const { data } = await userRequest.getUserProfile(chatId)
+
+          if (data.success) {
+            setInterlocutor(data.user)
+          }
+        } catch (e) {
+          setNotify('getChatError', 'error')
+          return <Redirect to={url.notFound}/>
+        }
+      })()
+    }
+
     if (!chatMessages) {
       chatRequest.getMessages([userId, match.params.userId]).then(({ data }) => {
         let messages = data.messages
@@ -71,6 +82,14 @@ const ChatView = ({
       changeLayout(false)
     }
   }, [])
+
+  const toggleVideoMode = () => {
+    setIsSingleVideo(!isSingleVideo)
+  }
+
+  if (!isCustomLayout) {
+    changeLayout(true)
+  }
 
   if (!chatMessages) {
     return <Loader/>
@@ -105,6 +124,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     setMessages: (messages, chatId) => dispatch(chatActions.setMessages(messages, chatId)),
+    setNotify: (message, type) => dispatch(appActions.setMessages(message, type)),
     changeLayout: isCustomLayout => dispatch(appActions.changeLayout(isCustomLayout))
   }
 }
@@ -121,6 +141,7 @@ ChatView.propTypes = {
   incomingCall: PropTypes.object,
   mediaStream: PropTypes.object,
   setMessages: PropTypes.func,
+  setNotify: PropTypes.func,
   changeLayout: PropTypes.func,
   isCustomLayout: PropTypes.bool,
   location: PropTypes.shape({

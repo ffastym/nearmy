@@ -326,9 +326,13 @@ a{
     top:0;
 }
 
-.chat-view-header .back:before{
-        font-size:28px;
+.chat-view-header .back{
+        display:block
     }
+
+.chat-view-header .back:before{
+            font-size:28px;
+        }
 
 .chat-view-header .video:before{
         font-size:20px;

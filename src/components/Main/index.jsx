@@ -36,6 +36,7 @@ const Main = ({ isLoggedIn }) => {
           <Route exact path={url.notifications} render={() => (<Notifications/>)}/>
           <Route exact path={url.chatView(':userId')} render={() => (<ChatView/>)}/>
           <Route exact path={url.profile(':userId')} render={() => (<UserProfile/>)}/>
+          <Route path={url.notFound} component={NotFound}/>
           <Route component={NotFound}/>
         </Switch>
         : <LogIn/>}

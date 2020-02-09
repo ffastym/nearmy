@@ -11,8 +11,12 @@
     box-shadow: $light-shadow;
     top: 0;
 
-    .back:before {
-        font-size: 28px;
+    .back {
+        display: block;
+
+        &:before {
+            font-size: 28px;
+        }
     }
 
     .video:before {

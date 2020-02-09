@@ -15,11 +15,12 @@ webpush.setVapidDetails(
  * Prepare notification data
  *
  * @param type string
- * @param name string
+ * @param data object
+ * @param rest object
  *
  * @returns {string}
  */
-const preparePayload = ({ type, name }) => {
+const preparePayload = ({ type, data, ...rest }) => {
   let payload = {
     title: 'N2M',
     body: 'У Вас нове сповіщення',
@@ -32,19 +33,19 @@ const preparePayload = ({ type, name }) => {
     case 'NEW_MESSAGE':
       payload = {
         ...payload,
-        title: 'Нове повідомлення',
-        tag: 'battle-accept',
+        ...rest,
+        data,
+        tag: 'new-message',
         actions: [
           {
             action: 'open',
-            title: 'Переглянути'
+            title: 'Відповісти'
           },
           {
             action: 'close',
             title: 'Закрити'
           }
-        ],
-        body: 'У вас нове повідомлення'
+        ]
       }
       break
     default:

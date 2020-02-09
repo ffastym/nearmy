@@ -42,21 +42,21 @@ const chatMessage = {
   },
 
   /**
-   * Get receiver user's model
+   * Get user model
    *
    * @param _id
    * @returns {Promise<*>}
    */
-  async getReceiverModel (_id) {
-    let receiverModel
+  async getUserModel (_id) {
+    let User
 
     try {
-      receiverModel = await Models.User.findOne({ _id })
-    } catch (err) {
-      console.error('Getting receiver model error', err)
+      User = await Models.User.findOne({ _id })
+    } catch (e) {
+      console.error('Getting user model error', e)
     }
 
-    return receiverModel
+    return User
   },
 
   /**

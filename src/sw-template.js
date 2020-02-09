@@ -33,7 +33,7 @@ if (typeof importScripts === 'function') {
     console.log('Workbox could not be loaded. No Offline support')
   }
 
-  self.addEventListener('push', event => {
+  self.addEventListener('push', async event => {
     const data = event.data.json()
 
     event.waitUntil(
@@ -43,8 +43,23 @@ if (typeof importScripts === 'function') {
 
   self.addEventListener('notificationclick', event => {
     if (event.action === 'open') {
-      // eslint-disable-next-line no-undef
-      clients.openWindow('https://www.pbattle.me/my_battles')
+      event.waitUntil(self.clients.matchAll({
+        includeUncontrolled: true
+      }).then(clientList => {
+        let chatUrl = self.origin + event.notification.data.chatUrl
+
+        for (let i = 0; i < clientList.length; i++) {
+          let client = clientList[i]
+
+          if (client.url === chatUrl && 'focus' in client) {
+            return client.focus()
+          }
+        }
+
+        if (self.clients.openWindow) {
+          return self.clients.openWindow(chatUrl)
+        }
+      }))
     }
 
     event.notification.close()

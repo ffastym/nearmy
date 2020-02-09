@@ -9,7 +9,7 @@ import stream from '../../../helper/stream'
 import url from '../../../router/url'
 import { connect } from 'react-redux'
 import { Image, Transformation } from 'cloudinary-react'
-import { NavLink, withRouter } from 'react-router-dom'
+import { NavLink, withRouter, Redirect } from 'react-router-dom'
 
 /**
  * Header component
@@ -60,7 +60,7 @@ const Header = ({
   return (
     <div className="chat-view-header" ref={chatViewHeaderRef}>
       <div className="chat-back-button">
-        <button className="action back" onClick={ history.goBack }/>
+        <NavLink className="action back" to={url.chat}/>
       </div>
       <NavLink to={
         {

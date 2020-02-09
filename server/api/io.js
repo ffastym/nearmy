@@ -5,6 +5,8 @@ import socketIo from 'socket.io'
 import Models from '../db/Models'
 import chatMessage from '../chat/message'
 import notification from '../middleware/push-notifications'
+import url from '../../src/router/url'
+import cloudinary from './cloudinary'
 
 /**
  * Subscribe server events
@@ -205,7 +207,7 @@ const io = {
       let receiverSocketId = this.users[receiverId]
       let senderSocketId = this.users[senderId]
 
-      const receiverModel = await chatMessage.getReceiverModel(receiverId)
+      const receiverModel = await chatMessage.getUserModel(receiverId)
 
       if (!receiverModel) {
         return console.log(`Can't find receiver`)
@@ -218,8 +220,18 @@ const io = {
         const subscription = receiverModel.subscription
 
         if (subscription) {
+          const senderModel = await chatMessage.getUserModel(senderId)
+          const icon = cloudinary.getImageUrl(senderModel.avatar)
+
           notification.send(subscription, {
-            type: 'NEW_MESSAGE'
+            type: 'NEW_MESSAGE',
+            title: `Нове повідомлення від ${senderModel.name}`,
+            body: message.text,
+            icon,
+            badge: icon,
+            data: {
+              chatUrl: url.chatView(senderId)
+            }
           })
         }
 
