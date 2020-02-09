@@ -36,20 +36,21 @@ $background-color-message: $color-blue;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 5px;
         cursor: pointer;
     }
 }
 
 .chat-message-view {
     display: flex;
+    box-shadow: $light-shadow;
+    overflow: hidden;
     flex-direction: column;
-    padding: 7px 10px;
     border-radius: 15px;
     color: $color-white;
 }
 
 .chat-message-text {
+    padding: 7px 10px;
     word-break: break-word;
     display: inline-block;
 }

@@ -522,19 +522,20 @@ a{
         display:flex;
         justify-content:center;
         align-items:center;
-        margin-bottom:5px;
         cursor:pointer;
     }
 
 .chat-message-view{
     display:flex;
+    box-shadow:0 0 5px -2px rgba(0,0,0,.7);
+    overflow:hidden;
     flex-direction:column;
-    padding:7px 10px;
     border-radius:15px;
     color:#FFFFFF;
 }
 
 .chat-message-text{
+    padding:7px 10px;
     word-break:break-word;
     display:inline-block;
 }
@@ -1149,7 +1150,8 @@ h1{
 .action{
     position:relative;
     width:35px;
-    height:35px
+    height:35px;
+    cursor:pointer
 }
 
 .action:before{

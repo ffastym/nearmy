@@ -1,8 +1,7 @@
-import Models from '../../db/Models'
-
 /**
  * @author Yuriy Matviyuk
  */
+import Models from '../../db/Models'
 
 const chatRequest = {
   /**
@@ -15,13 +14,24 @@ const chatRequest = {
      * @param req
      * @param res
      */
-    getUserChats: (req, res) => {
+    getUserChats: async (req, res) => {
       const userId = req.body.userId
+      let chats = []
+      let success
 
-      Models.Chat.find({ users: userId }, { messages: { $slice: -1 } })
-        .populate('messages')
-        .populate('users')
-        .exec((err, chats) => res.json({ success: !err, chats }))
+      try {
+        chats = await Models.Chat.find(
+          { users: userId },
+          { messages: { $slice: -1 } }
+        ).populate('messages')
+          .populate('users')
+        success = true
+      } catch (e) {
+        success = false
+        console.error('Getting user\'s chats error --->', e)
+      } finally {
+        res.json({ success, chats })
+      }
     },
 
     /**
@@ -30,17 +40,27 @@ const chatRequest = {
      * @param req
      * @param res
      */
-    getMessages: (req, res) => {
+    getMessages: async (req, res) => {
       const ids = req.body.ids
+      let messages = []
+      let success
 
-      Models.Message.find({
-        sender: {
-          $in: ids
-        },
-        receiver: {
-          $in: ids
-        }
-      }).exec((err, messages) => res.json({ success: !err, messages }))
+      try {
+        messages = await Models.Message.find({
+          sender: {
+            $in: ids
+          },
+          receiver: {
+            $in: ids
+          }
+        })
+        success = true
+      } catch (e) {
+        success = false
+        console.error('Getting chat messages error --->', e)
+      } finally {
+        res.json({ success, messages })
+      }
     }
   }
 }

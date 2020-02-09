@@ -9,6 +9,8 @@
 
 .action {
     @add-mixin icon-button;
+    cursor: pointer;
+
     &:before {
         color: $color-base;
     }

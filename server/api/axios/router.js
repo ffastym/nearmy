@@ -13,7 +13,7 @@ import chatRequest from './chat'
 const listenAxiosRequests = router => {
   const axios = {
     post: { ...appRequest.post, ...userRequest.post, ...chatRequest.post },
-    get: { ...appRequest.get, ...userRequest.get }
+    get: { ...appRequest.get, ...userRequest.get, ...chatRequest.get }
   }
 
   Object.entries(axios).forEach(([type, requests]) => {

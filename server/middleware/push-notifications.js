@@ -21,7 +21,7 @@ webpush.setVapidDetails(
  */
 const preparePayload = ({ type, name }) => {
   let payload = {
-    title: 'Photo Battle',
+    title: 'N2M',
     body: 'У Вас нове сповіщення',
     vibrate: [100, 50, 100],
     icon: 'icons/android-chrome-512x512.png',
@@ -47,24 +47,6 @@ const preparePayload = ({ type, name }) => {
         body: 'У вас нове повідомлення'
       }
       break
-    case 'ACCEPT_BATTLE':
-      payload = {
-        ...payload,
-        title: 'Батл прийнято',
-        tag: 'battle-accept',
-        actions: [
-          {
-            action: 'open',
-            title: 'Переглянути'
-          },
-          {
-            action: 'close',
-            title: 'Закрити'
-          }
-        ],
-        body: 'Користувач ' + name + ' прийняв Ваш запит на батл.'
-      }
-      break
     default:
       break
   }
@@ -86,12 +68,8 @@ const notification = {
    */
   send (subscription, data) {
     webpush.sendNotification(subscription, preparePayload(data))
-      .then(res => {
-        if (res.body) {
-          console.log('notification sending response ---> ', res.body)
-        }
-      }).catch(err => {
-        console.log('notification sending error ---> ', err)
+      .catch(err => {
+        console.error('Notification sending error ---> ', err)
       })
   }
 }

@@ -12,6 +12,7 @@ const chatMessage = {
    */
   async create (message) {
     let Message
+    let Chat
 
     try {
       Message = new Models.Message({
@@ -27,7 +28,11 @@ const chatMessage = {
       console.log('Message creation error ---> ', err)
     }
 
-    const Chat = await this.getChat(Message)
+    try {
+      Chat = await this.getChat(Message)
+    } catch (e) {
+      console.error('Get chat error ---> ', e)
+    }
 
     if (!Chat) {
       console.log(`Can't get chat`)
@@ -48,7 +53,7 @@ const chatMessage = {
     try {
       receiverModel = await Models.User.findOne({ _id })
     } catch (err) {
-      console.log('Getting receiver model error', err)
+      console.error('Getting receiver model error', err)
     }
 
     return receiverModel
@@ -68,11 +73,11 @@ const chatMessage = {
       Chat = new Models.Chat({ users, messages: [messageId] })
       await Chat.save(err => {
         if (err) {
-          console.log('Chat creating error ---> ', err)
+          console.error('Chat creating error ---> ', err)
         }
       })
     } catch (err) {
-      console.log('Chat creating error ---> ', err)
+      console.error('Chat creating error ---> ', err)
     }
 
     return Chat
@@ -95,7 +100,7 @@ const chatMessage = {
         { useFindAndModify: false }
       )
     } catch (err) {
-      console.log('Chat search error ---> ', err)
+      console.error('Chat search error ---> ', err)
     }
 
     return Chat
@@ -112,7 +117,7 @@ const chatMessage = {
       receiver.newChats.push(senderId)
       receiver.save()
     } catch (err) {
-      console.log('Updating receiver new chats error  ---> ', err)
+      console.error('Updating receiver new chats error  ---> ', err)
     }
   },
 
