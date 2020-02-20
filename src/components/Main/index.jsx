@@ -12,7 +12,7 @@ import LogIn from '../LogIn'
 import UserProfile from '../UserProfile'
 import PrivacyPolicy from '../PrivacyPolicy'
 import Chat from '../Chat'
-import ChatView from '../Chat/View'
+import ChatView from '../Chat/ChatView'
 import Notifications from '../Notifications'
 import Favorites from '../Favorites'
 

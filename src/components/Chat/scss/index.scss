@@ -3,8 +3,8 @@
  *
  * @author Yuriy Matviyuk
  */
-@import '../View/scss/index.scss';
-@import 'Preview.scss';
+@import 'ChatView.scss';
+@import 'ChatPreview.scss';
 
 .chat-previews-wrapper {
     display: flex;

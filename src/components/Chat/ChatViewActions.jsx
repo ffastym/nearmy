@@ -4,15 +4,15 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import socket from '../../../api/io/socket'
+import socket from '../../api/io/socket'
 import { useTranslation } from 'react-i18next'
-import cloudinary from '../../../api/cloudinary'
-import Loader from '../../Loader'
-import appActions from '../../../redux/actions/app'
+import cloudinary from '../../api/cloudinary'
+import Loader from '../Loader'
+import appActions from '../../redux/actions/app'
 import { Image, Transformation } from 'cloudinary-react'
 
 /**
- * Actions component
+ * ChatViewActions component
  *
  * @param user
  * @param userId
@@ -22,7 +22,7 @@ import { Image, Transformation } from 'cloudinary-react'
  * @returns {*}
  * @constructor
  */
-const Actions = ({ user, userId, setNotify, setActionsHeight }) => {
+const ChatViewActions = ({ user, userId, setNotify, setActionsHeight }) => {
   const [message, setMessage] = useState('')
   const [imageId, setImageId] = useState(null)
   const [isUploadProcessed, setIsUploadProcessed] = useState(false)
@@ -145,11 +145,11 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-Actions.propTypes = {
+ChatViewActions.propTypes = {
   user: PropTypes.object,
   setNotify: PropTypes.func,
   setActionsHeight: PropTypes.func,
   userId: PropTypes.string
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Actions)
+export default connect(mapStateToProps, mapDispatchToProps)(ChatViewActions)

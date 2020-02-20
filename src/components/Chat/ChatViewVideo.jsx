@@ -2,16 +2,16 @@
  * @author Yuriy Matviyuk
  */
 import Button from '@material-ui/core/Button'
-import cloudinary from '../../../api/cloudinary'
+import cloudinary from '../../api/cloudinary'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef } from 'react'
-import stream from '../../../helper/stream'
+import stream from '../../helper/stream'
 import { connect } from 'react-redux'
 import { Image, Transformation } from 'cloudinary-react'
 import { useTranslation } from 'react-i18next'
 
 /**
- * VideoChat component
+ * ChatViewVideo component
  *
  * @param mediaStream
  * @param incomingCall
@@ -22,7 +22,7 @@ import { useTranslation } from 'react-i18next'
  * @returns {*}
  * @constructor
  */
-const VideoChat = ({
+const ChatViewVideo = ({
   mediaStream,
   incomingCall,
   toggleVideoMode,
@@ -93,7 +93,7 @@ const mapDispatchToProps = dispatch => {
   return {}
 }
 
-VideoChat.propTypes = {
+ChatViewVideo.propTypes = {
   mediaStream: PropTypes.object,
   interlocutor: PropTypes.object,
   height: PropTypes.string,
@@ -102,4 +102,4 @@ VideoChat.propTypes = {
   incomingCall: PropTypes.object
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(VideoChat)
+export default connect(mapStateToProps, mapDispatchToProps)(ChatViewVideo)

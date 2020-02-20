@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import Loader from '../Loader'
 import { connect } from 'react-redux'
 import chatRequest from '../../api/axios/request/chat'
-import Preview from './Preview'
+import Preview from './ChatPreview'
 
 /**
  * Chat component

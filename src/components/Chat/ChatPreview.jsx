@@ -11,7 +11,7 @@ import url from '../../router/url'
 import { useTranslation } from 'react-i18next'
 
 /**
- * Preview component
+ * ChatPreview component
  *
  * @param chat
  * @param userId
@@ -21,7 +21,7 @@ import { useTranslation } from 'react-i18next'
  * @returns {*}
  * @constructor
  */
-const Preview = ({ chat, userId, messages, newChats }) => {
+const ChatPreview = ({ chat, userId, messages, newChats }) => {
   const { t } = useTranslation()
   const MAX_TEXT_LENGTH = 100
   const chatUsers = chat.users
@@ -86,11 +86,11 @@ const mapDispatchToProps = dispatch => {
   return {}
 }
 
-Preview.propTypes = {
+ChatPreview.propTypes = {
   chat: PropTypes.object.isRequired,
   newChats: PropTypes.object,
   userId: PropTypes.string,
   messages: PropTypes.object
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Preview)
+export default connect(mapStateToProps, mapDispatchToProps)(ChatPreview)

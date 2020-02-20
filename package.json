@@ -93,7 +93,7 @@
 				"workbox-build": "^4.1.1"
 		},
 		"scripts": {
-				"build:css": "postcss src/styles/index.scss -o src/styles/index.css",
+				"build:css": "node dev/css.js && postcss src/styles/index.scss -o src/styles/index.css",
 				"watch:css": "postcss src/styles/index.scss -o src/styles/index.css -w",
 				"devserver": "react-scripts start",
 				"build-sw": "node ./src/sw-build.js",

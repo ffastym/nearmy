@@ -1,20 +1,20 @@
 /**
  * @author Yuriy Matviyuk
  */
-import Actions from './Actions'
-import appActions from '../../../redux/actions/app'
-import chatActions from '../../../redux/actions/chat'
-import chatRequest from '../../../api/axios/request/chat'
-import Header from './Header'
-import Loader from '../../Loader'
-import Messages from './Messages'
+import Actions from './ChatViewActions'
+import appActions from '../../redux/actions/app'
+import chatActions from '../../redux/actions/chat'
+import chatRequest from '../../api/axios/request/chat'
+import Header from './ChatViewHeader'
+import Loader from '../Loader'
+import Messages from './ChatViewMessages'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
-import VideoChat from './VideoChat'
+import VideoChat from './ChatViewVideo'
 import { connect } from 'react-redux'
 import { withRouter, Redirect } from 'react-router-dom'
-import userRequest from '../../../api/axios/request/user'
-import url from '../../../router/url'
+import userRequest from '../../api/axios/request/user'
+import url from '../../router/url'
 
 /**
  * ChatView component

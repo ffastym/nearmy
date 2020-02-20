@@ -1,0 +1,16 @@
+// Variables
+@import "scss/variables/buttons.scss";
+@import "scss/variables/colors.scss";
+@import "scss/variables/effects.scss";
+@import "scss/variables/fonts.scss";
+@import "scss/variables/icons.scss";
+@import "scss/variables/layout.scss";
+@import "scss/variables/typography.scss";
+// Mixins
+@import "scss/mixins/icons.scss";
+@import "scss/mixins/layout.scss";
+@import "scss/mixins/media.scss";
+// Components
+@import "../components/Chat/scss/ChatView.scss";
+// Themes
+@import "scss/themes/default/ChatView.scss";

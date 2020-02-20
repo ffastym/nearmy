@@ -1,18 +1,18 @@
 /**
  * @author Yuriy Matviyuk
  */
-import chatActions from '../../../redux/actions/chat'
-import cloudinary from '../../../api/cloudinary'
+import chatActions from '../../redux/actions/chat'
+import cloudinary from '../../api/cloudinary'
 import PropTypes from 'prop-types'
 import React, { useEffect, useRef } from 'react'
-import stream from '../../../helper/stream'
-import url from '../../../router/url'
+import stream from '../../helper/stream'
+import url from '../../router/url'
 import { connect } from 'react-redux'
 import { Image, Transformation } from 'cloudinary-react'
 import { NavLink, withRouter, Redirect } from 'react-router-dom'
 
 /**
- * Header component
+ * ChatViewHeader component
  *
  * @param user
  * @param history
@@ -24,7 +24,7 @@ import { NavLink, withRouter, Redirect } from 'react-router-dom'
  * @returns {*}
  * @constructor
  */
-const Header = ({
+const ChatViewHeader = ({
   user,
   history,
   setHeaderHeight,
@@ -98,7 +98,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-Header.propTypes = {
+ChatViewHeader.propTypes = {
   user: PropTypes.object.isRequired,
   setHeaderHeight: PropTypes.func,
   setMediaStream: PropTypes.func,
@@ -108,4 +108,4 @@ Header.propTypes = {
   history: PropTypes.object.isRequired
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ChatViewHeader))

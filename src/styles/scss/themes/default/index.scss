@@ -1,8 +1,13 @@
-$actions-panel-height: 45px;
-
 /**
  * @author Yuriy Matviyuk
  */
+
+@import "reset-default.scss";
+@import "fonts.scss";
+@import "actions.scss";
+
+$actions-panel-height: 45px;
+
 body {
     font-family: $font-family-base;
     font-size: $font-size-base;
