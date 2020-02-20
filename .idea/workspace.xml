@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdc1a47f-c4fd-4538-b105-0ae011fc4e71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dev/css.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/Preview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/ChatPreview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Actions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/ChatViewActions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/ChatViewHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/ChatViewMessage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/ChatViewMessages.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/scss/Message.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/ChatViewMessage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/Messages/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/ChatViewMessages.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/VideoChat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/ChatViewVideo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/ChatView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/scss/Actions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/ChatViewActions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/scss/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/ChatViewHeader.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/scss/VideoChat.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/ChatViewVideo.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/View/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/ChatView.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/scss/Preview.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/ChatPreview.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chat/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chat/scss/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/actions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/themes/default/actions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/themes/default/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/reset-default.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/themes/default/reset-default.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/scss/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/scss/themes/default/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +88,7 @@
       <recent name="D:\WEB\react\nearme\server" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.build">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -189,9 +164,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.devserver" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.build:css" />
         <item itemvalue="npm.nodemon" />
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.watch:css" />
       </list>
     </recent_temporary>
@@ -303,7 +278,7 @@
       <workItem from="1581965205408" duration="1353000" />
       <workItem from="1582060001260" duration="556000" />
       <workItem from="1582139004731" duration="8710000" />
-      <workItem from="1582216247453" duration="6499000" />
+      <workItem from="1582216247453" duration="7733000" />
     </task>
     <servers />
   </component>
@@ -352,32 +327,32 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="371" y="105" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1576959871485" />
-    <state width="1236" height="236" key="GridCell.Tab.0.bottom" timestamp="1582222777573">
+    <state width="1236" height="236" key="GridCell.Tab.0.bottom" timestamp="1582224394424">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state width="1509" height="168" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1581025600273" />
-    <state width="1236" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582222777573" />
+    <state width="1236" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582224394424" />
     <state width="1509" height="168" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580985217633" />
     <state width="1287" height="236" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1581779737512" />
-    <state width="1236" height="236" key="GridCell.Tab.0.center" timestamp="1582222777572">
+    <state width="1236" height="236" key="GridCell.Tab.0.center" timestamp="1582224394424">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state width="1509" height="168" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1581025600273" />
-    <state width="1236" height="236" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582222777572" />
+    <state width="1236" height="236" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582224394424" />
     <state width="1509" height="168" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580985217633" />
     <state width="1287" height="236" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1581779737512" />
-    <state width="1236" height="236" key="GridCell.Tab.0.left" timestamp="1582222777572">
+    <state width="1236" height="236" key="GridCell.Tab.0.left" timestamp="1582224394424">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state width="1509" height="168" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1581025600273" />
-    <state width="1236" height="236" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582222777572" />
+    <state width="1236" height="236" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582224394424" />
     <state width="1509" height="168" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580985217633" />
     <state width="1287" height="236" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1581779737512" />
-    <state width="1236" height="236" key="GridCell.Tab.0.right" timestamp="1582222777572">
+    <state width="1236" height="236" key="GridCell.Tab.0.right" timestamp="1582224394424">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state width="1509" height="168" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2560.1040@0.0.1536.824" timestamp="1581025600273" />
-    <state width="1236" height="236" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582222777572" />
+    <state width="1236" height="236" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582224394424" />
     <state width="1509" height="168" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580985217633" />
     <state width="1287" height="236" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1581779737512" />
     <state width="1236" height="226" key="GridCell.Tab.1.bottom" timestamp="1582219863159">
@@ -456,10 +431,10 @@
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state x="2000" y="195" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1579210665803" />
-    <state x="2194" y="189" width="898" height="766" key="find.popup" timestamp="1582221018410">
+    <state x="2194" y="189" width="898" height="766" key="find.popup" timestamp="1582224363850">
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
-    <state x="2194" y="189" width="898" height="766" key="find.popup/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582221018410" />
+    <state x="2194" y="189" width="898" height="766" key="find.popup/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1582224363850" />
     <state x="164" y="150" width="729" height="674" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1580985184146" />
     <state x="2132" y="239" key="run.anything.popup" timestamp="1582218781196">
       <screen x="1920" y="0" width="2560" height="1040" />
